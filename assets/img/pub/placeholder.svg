@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="336" height="216" viewBox="0 0 336 216">
+  <rect width="336" height="216" fill="#f3ecf8"/>
+  <rect x="24" y="30" width="180" height="16" rx="4" fill="#c9b4dc"/>
+  <rect x="24" y="58" width="130" height="12" rx="4" fill="#dccce8"/>
+  <circle cx="250" cy="120" r="46" fill="none" stroke="#8a4fb0" stroke-width="6" opacity="0.6"/>
+  <path d="M40 170 L90 130 L130 155 L180 110 L230 150" fill="none" stroke="#6d2f8e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <text x="168" y="205" font-family="sans-serif" font-size="13" fill="#8b8595" text-anchor="middle">teaser / figure</text>
+</svg>

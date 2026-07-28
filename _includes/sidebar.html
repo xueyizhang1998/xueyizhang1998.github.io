@@ -1,0 +1,37 @@
+{%- assign p = site.data.profile -%}
+<aside class="sidebar">
+  <img class="avatar" src="{{ p.avatar | relative_url }}" alt="avatar"
+       onerror="this.src='{{ '/assets/img/avatar-placeholder.svg' | relative_url }}'">
+
+  <div class="name"><span class="i18n-en">{{ p.name.en }}</span><span class="i18n-zh">{{ p.name.zh }}</span></div>
+  <div class="role"><span class="i18n-en">{{ p.role.en }}</span><span class="i18n-zh">{{ p.role.zh }}</span></div>
+  <div class="affil">
+    <span class="i18n-en">{% if p.department.en != "" %}{{ p.department.en }}, {% endif %}{{ p.affiliation.en }}</span>
+    <span class="i18n-zh">{{ p.affiliation.zh }}{% if p.department.zh != "" %} {{ p.department.zh }}{% endif %}</span>
+  </div>
+  {% if p.location.en != "" %}
+  <div class="affil"><span class="i18n-en">{{ p.location.en }}</span><span class="i18n-zh">{{ p.location.zh }}</span></div>
+  {% endif %}
+  {% if p.motto.en != "" %}
+  <div class="motto"><span class="i18n-en">{{ p.motto.en }}</span><span class="i18n-zh">{{ p.motto.zh }}</span></div>
+  {% endif %}
+
+  <hr>
+
+  {% if p.email != "" %}
+  <div class="contact-line">
+    {% include icons.html id="email" %}
+    <a href="#" class="email-link" data-user="{{ p.email | split: '@' | first }}" data-dom="{{ p.email | split: '@' | last }}">email</a>
+  </div>
+  {% endif %}
+
+  <div class="social">
+    {% if p.links.scholar != "" %}<a href="{{ p.links.scholar }}" target="_blank" rel="noopener" title="Google Scholar">{% include icons.html id="scholar" %}</a>{% endif %}
+    {% if p.links.github != "" %}<a href="{{ p.links.github }}" target="_blank" rel="noopener" title="GitHub">{% include icons.html id="github" %}</a>{% endif %}
+    {% if p.links.dblp != "" %}<a href="{{ p.links.dblp }}" target="_blank" rel="noopener" title="DBLP">{% include icons.html id="dblp" %}</a>{% endif %}
+    {% if p.links.orcid != "" %}<a href="{{ p.links.orcid }}" target="_blank" rel="noopener" title="ORCID">{% include icons.html id="orcid" %}</a>{% endif %}
+    {% if p.links.linkedin != "" %}<a href="{{ p.links.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">{% include icons.html id="linkedin" %}</a>{% endif %}
+    {% if p.links.twitter != "" %}<a href="{{ p.links.twitter }}" target="_blank" rel="noopener" title="X / Twitter">{% include icons.html id="twitter" %}</a>{% endif %}
+    {% if p.links.cv != "" %}<a href="{{ p.links.cv | relative_url }}" target="_blank" rel="noopener" title="CV">{% include icons.html id="cv" %}</a>{% endif %}
+  </div>
+</aside>

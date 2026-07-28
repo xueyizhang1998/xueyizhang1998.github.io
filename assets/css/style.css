@@ -1,0 +1,398 @@
+/* ============================================================
+   Xueyi Zhang — Academic Homepage stylesheet
+   配色由下面这一组 CSS 变量统一控制（Ink：白底 + 墨蓝，中性学术风）。
+   想换配色：只改 :root 里的变量即可，不用动任何组件样式。
+   ============================================================ */
+
+:root {
+  --accent:        #2f4a6d;   /* 墨蓝主色，低调专业 */
+  --accent-soft:   #436690;   /* 悬停用 */
+  --accent-weak:   #eef2f7;   /* 极浅蓝，标签/卡片底 */
+  --gold:          #8a6d3b;   /* 低饱和金棕，作点缀 */
+  --bg:            #ffffff;
+  --surface:       #ffffff;
+  --surface-alt:   #f8f9fb;
+  --border:        #e4e7ec;
+  --text:          #1f2430;
+  --text-soft:     #545c6b;
+  --text-faint:    #868e9c;
+  --shadow:        0 1px 2px rgba(25,40,65,.05), 0 5px 16px rgba(25,40,65,.04);
+}
+
+/* ---------- 全局重置 ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+               "PingFang SC", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  transition: background .3s ease, color .3s ease;
+}
+
+a { color: var(--accent); text-decoration: none; transition: color .15s ease; }
+a:hover { color: var(--accent-soft); }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- 布局：左栏固定 + 右正文 ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2.4rem 1.8rem;
+  background: var(--surface-alt);
+  border-right: 1px solid var(--border);
+}
+
+.main {
+  padding: 2.6rem 3rem 4rem;
+  min-width: 0;
+}
+
+/* ---------- 顶部工具条：语言切换 ---------- */
+.toolbar {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  z-index: 50;
+  display: flex;
+  gap: .5rem;
+}
+.toolbar button {
+  font: inherit;
+  font-size: .82rem;
+  padding: .32rem .7rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all .15s ease;
+}
+.toolbar button:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ---------- 侧栏个人卡片 ---------- */
+/* 头像：圆角方形（参考 PRISM 的克制感），想要圆形把 border-radius 改成 50% */
+.avatar {
+  width: 176px; height: 176px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,45,70,.10);
+  background: var(--accent-weak);
+}
+.sidebar .name { font-size: 1.5rem; font-weight: 700; text-align: center; letter-spacing: .2px; }
+.sidebar .role { text-align: center; color: var(--accent); font-weight: 600; margin-top: .2rem; }
+.sidebar .affil { text-align: center; color: var(--text-soft); font-size: .92rem; margin-top: .15rem; }
+.sidebar .motto {
+  text-align: center; color: var(--text-faint); font-size: .84rem;
+  margin: .9rem 0 1.2rem; padding: 0 .3rem; line-height: 1.5;
+}
+.sidebar hr { border: none; border-top: 1px solid var(--border); margin: 1.1rem 0; }
+
+/* 联系方式行 */
+.contact-line {
+  display: flex; align-items: center; gap: .55rem;
+  color: var(--text-soft); font-size: .9rem;
+  justify-content: center; margin-bottom: 1rem;
+  word-break: break-all;
+}
+.contact-line svg { flex: none; width: 16px; height: 16px; fill: var(--accent); }
+
+/* 社交图标一排 */
+.social {
+  display: flex; flex-wrap: wrap; gap: .55rem; justify-content: center;
+}
+.social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-soft); transition: all .15s ease;
+}
+.social a:hover { color: #fff; background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.social svg { width: 19px; height: 19px; fill: currentColor; }
+
+/* ---------- 正文版块 ---------- */
+.section { margin-bottom: 2.8rem; scroll-margin-top: 1.5rem; }
+.section > h2 {
+  font-size: 1.28rem; font-weight: 700; color: var(--text);
+  display: flex; align-items: center; gap: .6rem; margin-bottom: 1.1rem;
+}
+.section > h2::before {
+  content: ""; width: 3px; height: 1em;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.section .sub-h { font-size: .95rem; font-weight: 700; color: var(--text-soft);
+  margin: 1.4rem 0 .8rem; text-transform: uppercase; letter-spacing: .05em; }
+
+.bio { color: var(--text-soft); }
+
+/* 关键词标签 */
+.keywords { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.tag {
+  font-size: .8rem; padding: .28rem .7rem; border-radius: 999px;
+  background: var(--accent-weak); color: var(--accent); font-weight: 600;
+}
+
+/* ---------- News ---------- */
+.news { list-style: none; }
+.news li { display: flex; gap: .9rem; padding: .5rem 0; border-bottom: 1px dashed var(--border); }
+.news li:last-child { border-bottom: none; }
+.news .date {
+  flex: none; font-variant-numeric: tabular-nums; font-size: .82rem;
+  color: var(--gold); font-weight: 700; min-width: 62px; padding-top: .1rem;
+}
+.news .what { color: var(--text-soft); }
+
+/* ---------- 顶部锚点导航 ---------- */
+.topnav {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: .7rem 3rem;
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.topnav a {
+  font-size: .88rem; color: var(--text-soft); font-weight: 500;
+  padding-bottom: 2px; border-bottom: 2px solid transparent;
+}
+.topnav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------- 论文分组小标题 ---------- */
+.group-h {
+  font-size: .92rem; font-weight: 700; color: var(--accent);
+  margin: 1.6rem 0 .8rem; padding-bottom: .35rem;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: .45rem;
+}
+.group-h::before {
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); flex: none;
+}
+.hint { font-size: .82rem; color: var(--text-faint); margin-bottom: .3rem; }
+
+/* 论文一句话要点 */
+.pub .desc { font-size: .85rem; color: var(--text-soft); margin-top: .4rem; line-height: 1.55; }
+
+/* ---------- Experience（工作/学历/访学合并，带机构 logo） ---------- */
+.exp-list { display: flex; flex-direction: column; gap: .2rem; }
+.exp-item {
+  display: grid; grid-template-columns: 160px 1fr; gap: 1.1rem;
+  padding: .9rem .2rem; border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.exp-item:last-child { border-bottom: none; }
+
+/* 机构 logo：横版校徽（含校名），保持原比例左对齐 */
+.exp-logo {
+  width: 160px; min-height: 30px;
+  display: flex; align-items: center; justify-content: flex-start;
+  flex: none;
+}
+.exp-logo img { max-width: 100%; max-height: 44px; width: auto; height: auto; object-fit: contain; }
+/* 无 logo 时的文字占位 */
+.exp-logo .abbr {
+  font-size: .78rem; font-weight: 800; color: var(--accent);
+  letter-spacing: .03em; padding: .25rem .55rem;
+  background: var(--accent-weak); border-radius: 6px;
+}
+
+.exp-body { min-width: 0; }
+.exp-top {
+  display: flex; align-items: baseline; gap: .6rem;
+  justify-content: space-between; flex-wrap: wrap;
+}
+.exp-role { font-weight: 700; font-size: .98rem; }
+.exp-period {
+  font-size: .8rem; color: var(--gold); font-weight: 700;
+  font-variant-numeric: tabular-nums; flex: none;
+}
+.exp-org { color: var(--text-soft); font-size: .9rem; margin-top: .1rem; }
+.exp-meta { color: var(--text-faint); font-size: .84rem; margin-top: .1rem; }
+/* 类型徽标 */
+.exp-kind {
+  display: inline-block; font-size: .68rem; font-weight: 700;
+  padding: .06rem .4rem; border-radius: 4px; margin-left: .4rem;
+  border: 1px solid var(--border); color: var(--text-faint); vertical-align: middle;
+}
+.exp-kind.visiting { color: var(--accent); border-color: var(--accent); }
+
+.proj-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: .95rem 1.1rem; box-shadow: var(--shadow);
+}
+.proj-card .pname { font-weight: 700; }
+.proj-card .pprog { color: var(--accent); font-size: .88rem; margin-top: .15rem; }
+.proj-card .prole { color: var(--text-faint); font-size: .85rem; margin-top: .15rem; }
+
+/* ---------- 论文卡片 ---------- */
+.pub {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1.2rem;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.pub:hover { transform: translateY(-1px); border-color: var(--accent-soft);
+  box-shadow: 0 4px 16px rgba(30,45,70,.09); }
+
+.pub .thumb {
+  width: 190px; height: 119px; border-radius: 9px; overflow: hidden;
+  background: var(--accent-weak); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.pub .thumb img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.pub .thumb .ph { color: var(--accent); opacity: .5; font-size: .72rem; text-align: center; padding: .4rem; }
+
+/* 缩略图点击放大：整块缩略图是一个按钮 */
+.pub .thumb .zoom {
+  width: 100%; height: 100%; padding: 0; border: none; background: none;
+  display: block; cursor: zoom-in; position: relative;
+}
+.pub .thumb .zoom::after {
+  content: ""; position: absolute; inset: 0;
+  background: var(--accent); opacity: 0; transition: opacity .16s ease;
+}
+.pub .thumb .zoom:hover::after { opacity: .08; }
+.pub .thumb .zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- 论文主图放大层 ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(16, 24, 40, .88);
+  display: flex; align-items: center; justify-content: center;
+  padding: 3.2rem 1.5rem 1.5rem;
+}
+.lightbox[hidden] { display: none; }
+.lightbox .lb-fig { margin: 0; text-align: center; max-width: 100%; }
+.lightbox .lb-fig img {
+  max-width: min(1100px, 92vw); max-height: 80vh;
+  width: auto; height: auto; display: block; margin: 0 auto;
+  background: #fff; border-radius: 8px; box-shadow: 0 18px 50px rgba(0, 0, 0, .45);
+}
+.lightbox .lb-fig figcaption {
+  margin-top: .85rem; color: rgba(255, 255, 255, .9);
+  font-size: .86rem; line-height: 1.5; max-width: min(1100px, 92vw);
+}
+.lightbox .lb-close {
+  position: absolute; top: 1rem; right: 1.25rem;
+  width: 2.2rem; height: 2.2rem; padding: 0;
+  font-size: 1.6rem; line-height: 1; cursor: pointer;
+  color: #fff; background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .3); border-radius: 50%;
+}
+.lightbox .lb-close:hover { background: rgba(255, 255, 255, .26); }
+.lightbox .lb-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+body.lb-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .lightbox { padding: 3rem .8rem 1rem; }
+  .lightbox .lb-fig img { max-height: 72vh; }
+}
+
+.pub .body { min-width: 0; }
+.pub .title { font-weight: 700; font-size: 1.02rem; line-height: 1.4; color: var(--text); }
+.pub .star { color: var(--gold); margin-right: .25rem; }
+.pub .authors { font-size: .9rem; color: var(--text-soft); margin: .3rem 0; }
+.pub .authors b, .pub .authors strong { color: var(--text); }
+.pub .venue { font-size: .88rem; color: var(--accent); font-weight: 600; font-style: italic; }
+.pub .note {
+  display: inline-block; font-size: .72rem; font-weight: 700; color: var(--gold);
+  border: 1px solid var(--gold); border-radius: 5px; padding: .02rem .4rem; margin-left: .5rem;
+  font-style: normal; vertical-align: middle;
+}
+
+.pub .ptags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .55rem; }
+.pub .ptags span {
+  font-size: .72rem; padding: .16rem .55rem; border-radius: 6px;
+  background: var(--surface-alt); color: var(--text-faint); border: 1px solid var(--border);
+}
+
+.pub .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
+.pub .links a {
+  display: inline-flex; align-items: center; gap: .32rem;
+  font-size: .8rem; font-weight: 600; padding: .28rem .7rem;
+  border-radius: 7px; border: 1px solid var(--accent);
+  color: var(--accent); background: transparent; transition: all .15s ease;
+}
+.pub .links a:hover { background: var(--accent); color: #fff; }
+.pub .links a svg { width: 13px; height: 13px; fill: currentColor; }
+
+/* 次要链接（如 DOI）：比 Paper/Code 弱一档，用灰边灰字 */
+.pub .links a.secondary {
+  border-color: var(--border); color: var(--text-soft); font-weight: 500;
+}
+.pub .links a.secondary:hover {
+  background: var(--text-soft); border-color: var(--text-soft); color: #fff;
+}
+
+/* 展开/收起按钮 */
+.toggle-pubs {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  color: var(--accent); background: transparent; border: 1px dashed var(--accent);
+  border-radius: 8px; padding: .4rem 1rem; margin-top: .3rem;
+}
+.toggle-pubs:hover { background: var(--accent-weak); }
+.hidden { display: none !important; }
+
+/* ---------- Honors ---------- */
+.honors { list-style: none; }
+.honors li { display: flex; gap: .9rem; padding: .4rem 0; }
+.honors .hy { flex: none; color: var(--gold); font-weight: 700; min-width: 46px; font-variant-numeric: tabular-nums; }
+.honors .ht { color: var(--text-soft); }
+
+/* ---------- 页脚 ---------- */
+.foot { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--border);
+  color: var(--text-faint); font-size: .8rem; text-align: center; }
+
+/* ---------- 语言显隐（由 JS 在 <html> 上加 lang-en / lang-zh） ---------- */
+.i18n-zh { display: none; }
+html.lang-zh .i18n-zh { display: initial; }
+html.lang-zh .i18n-en { display: none; }
+/* 块级元素用这个类，避免 inline 破坏布局 */
+.blk.i18n-zh, .blk.i18n-en { display: none; }
+html.lang-en .blk.i18n-en { display: block; }
+html.lang-zh .blk.i18n-zh { display: block; }
+
+/* ---------- 响应式：窄屏改为上下堆叠 ---------- */
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; border-right: none;
+    border-bottom: 1px solid var(--border); }
+  .main { padding: 2rem 1.4rem 3rem; }
+  .avatar { width: 132px; height: 132px; }
+  .exp-item { grid-template-columns: 1fr; gap: .5rem; }
+  .exp-logo { width: auto; }
+  .exp-logo img { max-height: 34px; }
+  .topnav { padding: .7rem 1.4rem; gap: 1rem; }
+}
+@media (max-width: 560px) {
+  .pub { grid-template-columns: 1fr; }
+  .pub .thumb { width: 100%; height: 190px; }
+}
+
+

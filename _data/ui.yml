@@ -1,0 +1,37 @@
+# ============================================================
+#  界面文案 / UI strings —— 各版块标题、按钮文字（双语）
+# ============================================================
+
+nav:
+  about:        { en: "About",        zh: "关于" }
+  news:         { en: "News",         zh: "动态" }
+  publications: { en: "Publications", zh: "论文" }
+  experience:   { en: "Experience",   zh: "教育与经历" }
+  projects:     { en: "Projects",     zh: "科研项目" }
+  honors:       { en: "Honors",       zh: "荣誉奖励" }
+
+labels:
+  selected_pubs: { en: "Selected Publications", zh: "代表性论文" }
+  all_pubs:      { en: "All Publications",      zh: "全部论文" }
+  by_topic:      { en: "By Research Topic",     zh: "按研究方向" }
+  show_all:      { en: "Show all",              zh: "展开全部" }
+  show_less:     { en: "Show less",             zh: "收起" }
+  email:         { en: "Email",                 zh: "邮箱" }
+  interests:     { en: "Research Interests",    zh: "研究兴趣" }
+  first_author:  { en: "First-author papers.",  zh: "以下均为第一作者论文。" }
+  zoom:          { en: "click to enlarge",      zh: "点击放大" }
+  close:         { en: "Close",                 zh: "关闭" }
+
+# 经历类型徽标文案
+kinds:
+  position: { en: "",         zh: "" }
+  degree:   { en: "",         zh: "" }
+  visiting: { en: "Visiting", zh: "访学" }
+
+buttons:
+  paper:   { en: "Paper",   zh: "论文" }
+  code:    { en: "Code",    zh: "代码" }
+  project: { en: "Project", zh: "项目" }
+  doi:     { en: "DOI",     zh: "DOI" }
+  bibtex:  { en: "BibTeX",  zh: "BibTeX" }
+  video:   { en: "Video",   zh: "视频" }

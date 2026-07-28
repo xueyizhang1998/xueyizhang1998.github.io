@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <!-- 首屏前就设定语言，避免闪烁 -->
+  <script>
+    (function(){
+      try{
+        var l = localStorage.getItem('lang');
+        var r = document.documentElement;
+        if(l){ r.className = 'lang-' + l; r.setAttribute('lang', l); }
+      }catch(e){}
+    })();
+  </script>
+</head>
+<body>
+  {% include toolbar.html %}
+  <div class="layout">
+    {% include sidebar.html %}
+    <main class="main">
+      {% include topnav.html %}
+      {{ content }}
+      <footer class="foot">
+        <span class="i18n-en">© {{ 'now' | date: '%Y' }} {{ site.data.profile.name.en }}. Built with Jekyll.</span>
+        <span class="i18n-zh">© {{ 'now' | date: '%Y' }} {{ site.data.profile.name.zh }} · 由 Jekyll 构建。</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- 论文主图放大层（点击缩略图时弹出） -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Figure viewer">
+    <button type="button" class="lb-close" id="lbClose"
+            aria-label="{{ site.data.ui.labels.close.en }}">&times;</button>
+    <figure class="lb-fig">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

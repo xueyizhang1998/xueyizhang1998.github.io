@@ -1,0 +1,35 @@
+{%- comment -%} 单篇论文卡片。用法：{% include pub-card.html pub=item %} {%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign ui = site.data.ui -%}
+<div class="pub">
+  <div class="thumb">
+    {% if pub.image and pub.image != "" %}
+      <button type="button" class="zoom" data-full="{{ pub.image | relative_url }}" data-cap="{{ pub.title | escape }}"
+              aria-label="{{ pub.title | escape }} — {{ ui.labels.zoom.en }}">
+        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title | escape }}"
+             onerror="this.closest('.thumb').innerHTML='<span class=&quot;ph&quot;>{{ pub.venue }}</span>'">
+      </button>
+    {% else %}
+      <span class="ph">{{ pub.venue }}</span>
+    {% endif %}
+  </div>
+  <div class="body">
+    <div class="title">{% if pub.selected %}<span class="star" title="Selected">★</span>{% endif %}{{ pub.title }}{% if pub.note and pub.note != "" %}<span class="note">{{ pub.note }}</span>{% endif %}</div>
+    <div class="authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    <div class="venue">{{ pub.venue }}</div>
+    {% if pub.desc and pub.desc.en != "" %}
+    <div class="desc"><span class="i18n-en">{{ pub.desc.en }}</span><span class="i18n-zh">{{ pub.desc.zh }}</span></div>
+    {% endif %}
+    {% if pub.tags %}
+    <div class="ptags">{% for t in pub.tags %}<span>{{ t }}</span>{% endfor %}</div>
+    {% endif %}
+    <div class="links">
+      {% if pub.links.paper and pub.links.paper != "" %}<a href="{{ pub.links.paper }}" target="_blank" rel="noopener">{% include icons.html id="doc" %}<span class="i18n-en">{{ ui.buttons.paper.en }}</span><span class="i18n-zh">{{ ui.buttons.paper.zh }}</span></a>{% endif %}
+      {% if pub.links.code and pub.links.code != "" %}<a href="{{ pub.links.code }}" target="_blank" rel="noopener">{% include icons.html id="code" %}<span class="i18n-en">{{ ui.buttons.code.en }}</span><span class="i18n-zh">{{ ui.buttons.code.zh }}</span></a>{% endif %}
+      {% if pub.links.project and pub.links.project != "" %}<a href="{{ pub.links.project }}" target="_blank" rel="noopener">{% include icons.html id="link" %}<span class="i18n-en">{{ ui.buttons.project.en }}</span><span class="i18n-zh">{{ ui.buttons.project.zh }}</span></a>{% endif %}
+      {% if pub.links.doi and pub.links.doi != "" %}<a class="secondary" href="{{ pub.links.doi }}" target="_blank" rel="noopener">{% include icons.html id="link" %}<span>{{ ui.buttons.doi.en }}</span></a>{% endif %}
+      {% if pub.links.bibtex and pub.links.bibtex != "" %}<a href="{{ pub.links.bibtex }}" target="_blank" rel="noopener">{% include icons.html id="doc" %}<span>{{ ui.buttons.bibtex.en }}</span></a>{% endif %}
+      {% if pub.links.video and pub.links.video != "" %}<a href="{{ pub.links.video }}" target="_blank" rel="noopener">{% include icons.html id="video" %}<span class="i18n-en">{{ ui.buttons.video.en }}</span><span class="i18n-zh">{{ ui.buttons.video.zh }}</span></a>{% endif %}
+    </div>
+  </div>
+</div>

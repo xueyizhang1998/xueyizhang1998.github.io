@@ -1,0 +1,45 @@
+# ============================================================
+#  About / 关于我
+#  三段式结构（参考 PRISM 与 Hankai Liu 的通行写法）：
+#    第一段：我现在在哪、在谁手下
+#    第二段：Prior to this —— 回溯学历与各阶段师承
+#    第三段：当前研究方向
+#  这样读者三句话就能理清你的位置与师承，不必自己拼时间线。
+# ============================================================
+
+bio:
+  en: >
+    I am a Research Fellow (postdoc) at the <b>National University of Singapore</b>,
+    working with <b>Prof. Jiaheng Zhang</b>. I am also a visiting scholar at
+    <b>CUHK-Shenzhen</b>.
+    <br><br>
+    Prior to this, I received my Ph.D. in Control Science and Engineering from the
+    <b>National University of Defense Technology</b> (2020–2025). During my Ph.D.,
+    I spent a year as a joint-training student at <b>Nanyang Technological University</b>,
+    where my research on multimodal perception was supervised by
+    <b>Prof. Haizhou Li</b>. I obtained my B.Eng. in Electronic and Information
+    Engineering from <b>Dalian Maritime University</b> (2016–2020).
+    <br><br>
+    My research centers on <b>AI safety and trustworthy multimodal learning</b>.
+    I work on continual learning that resists catastrophic forgetting, deepfake
+    detection that generalizes to unseen forgeries, robust learning under noisy
+    labels, and multimodal perception spanning lip reading and neural signal decoding.
+    My work has appeared at ICCV, NeurIPS, AAAI, ACM Multimedia, and Neural Networks.
+  zh: >
+    我是<b>新加坡国立大学</b>博士后研究员（Research Fellow），
+    合作导师为 <b>Jiaheng Zhang 教授</b>；同时担任<b>香港中文大学（深圳）</b>访问学者。
+    <br><br>
+    在此之前，我于 2020–2025 年在<b>国防科技大学</b>获得控制科学与工程博士学位。
+    博士期间曾在<b>南洋理工大学</b>联合培养一年，
+    多模态感知方向的研究由<b>李海洲教授</b>指导。
+    2016–2020 年在<b>大连海事大学</b>获得电子信息工程学士学位。
+    <br><br>
+    我的研究聚焦<b>人工智能安全与可信多模态学习</b>，
+    包括抵抗灾难性遗忘的持续学习、可泛化到未知伪造类型的深度伪造检测、
+    噪声标签下的鲁棒学习，以及涵盖唇语识别与神经信号解码的多模态感知。
+    研究成果发表于 ICCV、NeurIPS、AAAI、ACM Multimedia 与 Neural Networks 等。
+
+# 研究关键词（会显示成一排小标签）
+keywords:
+  en: ["AI Safety", "Continual Learning", "Deepfake Detection", "Multimodal Learning", "Lip Reading", "Neural Decoding"]
+  zh: ["AI 安全", "持续学习", "深度伪造检测", "多模态学习", "唇语识别", "神经解码"]

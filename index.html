@@ -1,0 +1,116 @@
+---
+layout: default
+---
+{%- assign ui = site.data.ui -%}
+
+<!-- ===================== About ===================== -->
+<section class="section" id="about">
+  <h2><span class="i18n-en">{{ ui.nav.about.en }}</span><span class="i18n-zh">{{ ui.nav.about.zh }}</span></h2>
+  <div class="bio">
+    <div class="blk i18n-en">{{ site.data.about.bio.en }}</div>
+    <div class="blk i18n-zh">{{ site.data.about.bio.zh }}</div>
+  </div>
+  <div class="sub-h"><span class="i18n-en">{{ ui.labels.interests.en }}</span><span class="i18n-zh">{{ ui.labels.interests.zh }}</span></div>
+  <div class="keywords">
+    {% for k in site.data.about.keywords.en %}<span class="tag i18n-en">{{ k }}</span>{% endfor %}
+    {% for k in site.data.about.keywords.zh %}<span class="tag i18n-zh">{{ k }}</span>{% endfor %}
+  </div>
+</section>
+
+<!-- ===================== News ===================== -->
+<section class="section" id="news">
+  <h2><span class="i18n-en">{{ ui.nav.news.en }}</span><span class="i18n-zh">{{ ui.nav.news.zh }}</span></h2>
+  <ul class="news">
+    {% for n in site.data.news %}
+    <li>
+      <span class="date">{{ n.date }}</span>
+      <span class="what"><span class="i18n-en">{{ n.en }}</span><span class="i18n-zh">{{ n.zh }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- ===================== Publications ===================== -->
+<section class="section" id="publications">
+  <h2><span class="i18n-en">{{ ui.nav.publications.en }}</span><span class="i18n-zh">{{ ui.nav.publications.zh }}</span></h2>
+
+  <div class="hint"><span class="i18n-en">{{ ui.labels.first_author.en }}</span><span class="i18n-zh">{{ ui.labels.first_author.zh }}</span></div>
+
+  {%- assign selected = site.data.publications | where_exp: "p", "p.selected" -%}
+
+  {% if selected.size > 0 %}
+  <div class="sub-h"><span class="i18n-en">{{ ui.labels.selected_pubs.en }}</span><span class="i18n-zh">{{ ui.labels.selected_pubs.zh }}</span></div>
+  {% assign sel_sorted = selected | sort: "order" | reverse %}
+  {% for item in sel_sorted %}{% include pub-card.html pub=item %}{% endfor %}
+  {% endif %}
+
+  {% if site.group_publications %}
+    {%- comment -%} 按研究方向分组 {%- endcomment -%}
+    <div class="sub-h" style="margin-top:1.8rem"><span class="i18n-en">{{ ui.labels.by_topic.en }}</span><span class="i18n-zh">{{ ui.labels.by_topic.zh }}</span></div>
+    {% for g in site.data.pub_groups %}
+      {% assign items = site.data.publications | where: "group", g.id | sort: "order" | reverse %}
+      {% if items.size > 0 %}
+        <div class="group-h"><span class="i18n-en">{{ g.en }}</span><span class="i18n-zh">{{ g.zh }}</span></div>
+        {% for item in items %}{% include pub-card.html pub=item %}{% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {%- comment -%} 按年份倒序 {%- endcomment -%}
+    {% assign allpubs = site.data.publications | sort: "order" | reverse %}
+    <div class="sub-h" style="margin-top:1.8rem"><span class="i18n-en">{{ ui.labels.all_pubs.en }}</span><span class="i18n-zh">{{ ui.labels.all_pubs.zh }}</span></div>
+    {% for item in allpubs %}{% include pub-card.html pub=item %}{% endfor %}
+  {% endif %}
+</section>
+
+<!-- ============ Experience（工作/学历/访学合并，按时间倒序） ============ -->
+{% if site.data.experience and site.data.experience.size > 0 %}
+<section class="section" id="experience">
+  <h2><span class="i18n-en">{{ ui.nav.experience.en }}</span><span class="i18n-zh">{{ ui.nav.experience.zh }}</span></h2>
+  <div class="exp-list">
+    {% assign xs = site.data.experience | sort: "sort" | reverse %}
+    {% for x in xs %}
+    <div class="exp-item">
+      <div class="exp-logo">
+        {% if x.logo and x.logo != "" %}
+          <img src="{{ '/assets/img/logo/' | append: x.logo | relative_url }}" alt="{{ x.abbr }}">
+        {% else %}<span class="abbr">{{ x.abbr }}</span>{% endif %}
+      </div>
+      <div class="exp-body">
+        <div class="exp-top">
+          <span class="exp-role"><span class="i18n-en">{{ x.role.en }}</span><span class="i18n-zh">{{ x.role.zh }}</span>{% if x.kind == 'visiting' %}<span class="exp-kind visiting"><span class="i18n-en">{{ ui.kinds.visiting.en }}</span><span class="i18n-zh">{{ ui.kinds.visiting.zh }}</span></span>{% endif %}</span>
+          <span class="exp-period">{{ x.period }}</span>
+        </div>
+        <div class="exp-org"><span class="i18n-en">{{ x.org.en }}{% if x.location.en != "" %} · {{ x.location.en }}{% endif %}</span><span class="i18n-zh">{{ x.org.zh }}{% if x.location.zh != "" %} · {{ x.location.zh }}{% endif %}</span></div>
+        {% if x.advisor.en != "" %}<div class="exp-meta"><span class="i18n-en">{{ x.advisor.en }}</span><span class="i18n-zh">{{ x.advisor.zh }}</span></div>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ===================== Projects ===================== -->
+{% if site.data.projects and site.data.projects.size > 0 %}
+<section class="section" id="projects">
+  <h2><span class="i18n-en">{{ ui.nav.projects.en }}</span><span class="i18n-zh">{{ ui.nav.projects.zh }}</span></h2>
+  {% for pr in site.data.projects %}
+  <div class="proj-card" style="margin-bottom:.7rem">
+    <div class="pname"><span class="i18n-en">{{ pr.name.en }}</span><span class="i18n-zh">{{ pr.name.zh }}</span></div>
+    <div class="pprog"><span class="i18n-en">{{ pr.program.en }}</span><span class="i18n-zh">{{ pr.program.zh }}</span>{% if pr.period != "" %} · {{ pr.period }}{% endif %}</div>
+    <div class="prole"><span class="i18n-en">{{ pr.role.en }}</span><span class="i18n-zh">{{ pr.role.zh }}</span></div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+<!-- ===================== Honors ===================== -->
+{% if site.data.honors and site.data.honors.size > 0 %}
+<section class="section" id="honors">
+  <h2><span class="i18n-en">{{ ui.nav.honors.en }}</span><span class="i18n-zh">{{ ui.nav.honors.zh }}</span></h2>
+  <ul class="honors">
+    {% for h in site.data.honors %}
+    <li><span class="hy">{{ h.year }}</span><span class="ht"><span class="i18n-en">{{ h.en }}</span><span class="i18n-zh">{{ h.zh }}</span></span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

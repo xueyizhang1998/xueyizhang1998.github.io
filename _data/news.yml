@@ -1,0 +1,24 @@
+# ============================================================
+#  News / 动态（最新的放最上面）
+#  加一条就复制一个 "- date:" 块。
+# ============================================================
+
+- date: "2026.06"
+  en: "Joined the <b>National University of Singapore</b> as a Research Fellow."
+  zh: "加入<b>新加坡国立大学</b>，任博士后研究员（Research Fellow）。"
+
+- date: "2026.01"
+  en: 'Our paper on exemplar-free continual video action recognition is accepted to <b>AAAI 2026</b>.'
+  zh: '无样本回放持续视频动作识别工作被 <b>AAAI 2026</b> 接收。'
+
+- date: "2025.09"
+  en: 'Our paper on multi-band sEEG auditory reconstruction is accepted to <b>NeurIPS 2025</b> (Datasets &amp; Benchmarks Track).'
+  zh: '多频段 sEEG 听觉重建工作被 <b>NeurIPS 2025</b>（Datasets &amp; Benchmarks Track）接收。'
+
+- date: "2025.07"
+  en: 'Three papers accepted to <b>ACM Multimedia 2025</b>; one paper accepted to <b>ICCV 2025</b>.'
+  zh: '三篇论文被 <b>ACM Multimedia 2025</b> 接收，一篇论文被 <b>ICCV 2025</b> 接收。'
+
+- date: "2025.06"
+  en: "Received my Ph.D. from the <b>National University of Defense Technology</b>."
+  zh: "于<b>国防科技大学</b>获得博士学位。"

@@ -1,0 +1,22 @@
+# ============================================================
+#  论文分组 / Publication groups
+#  控制「按研究方向分组」时各组的顺序与标题。
+#  publications.yml 里每篇论文的 group 字段要对应这里的 id。
+#  想改成纯按年份排列：把 _config.yml 的 group_publications 设为 false。
+# ============================================================
+
+- id: continual
+  en: "Continual Learning & Deepfake Detection"
+  zh: "持续学习与深度伪造检测"
+
+- id: multimodal
+  en: "Lip Reading & Multimodal Perception"
+  zh: "唇语识别与多模态感知"
+
+- id: neuro
+  en: "Neural Signal Decoding"
+  zh: "神经信号解码"
+
+- id: robust
+  en: "Robust & Efficient Adaptation"
+  zh: "鲁棒学习与高效适配"

@@ -1,0 +1,48 @@
+# ============================================================
+#  个人信息 / Profile   —— 左侧栏卡片内容
+#  每个字段都有 en（英文）和 zh（中文）两个版本。
+#  只改冒号右边引号里的文字即可。
+# ============================================================
+
+name:
+  en: "Xueyi Zhang"
+  zh: "张雪毅"          # TODO: 若中文名不对请改这里
+
+# 一句话身份（显示在名字下方）
+role:
+  en: "Research Fellow (Postdoc)"
+  zh: "博士后研究员"
+
+# 所属院系 / 学校
+affiliation:
+  en: "National University of Singapore"
+  zh: "新加坡国立大学"
+
+department:
+  en: ""                # 如需显示院系可填，如 "School of Computing"
+  zh: ""
+
+# 所在地
+location:
+  en: "Singapore"
+  zh: "新加坡"
+
+# 头像文件（放在 assets/img/ 下）
+avatar: "/assets/img/avatar.jpg"
+
+# 一句话研究方向（显示在头像卡片下、可选）
+motto:
+  en: "AI Safety · Continual Learning · Multimodal Perception"
+  zh: "AI 安全 · 持续学习 · 多模态感知"
+
+# ---- 联系方式与外链（留空 "" 则不显示该图标）----
+email: "xueyi.zhang@nus.edu.sg"
+# 页面上会做简单反爬处理，展示时把 [at] 还原
+links:
+  scholar: "https://scholar.google.com/citations?user=-hFq7VAAAAAJ"
+  github:  "https://github.com/xueyizhang1998"   # 若实际账号有变，改这里
+  dblp:    "https://dblp.org/pid/90/10666-1.html"
+  orcid:   ""
+  linkedin: ""
+  twitter: ""
+  cv:      ""     # 把 CV 放到 assets/cv.pdf 后填 "/assets/cv.pdf"

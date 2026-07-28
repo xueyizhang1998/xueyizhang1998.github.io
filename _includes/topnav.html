@@ -1,0 +1,15 @@
+{%- assign n = site.data.ui.nav -%}
+<nav class="topnav">
+  <a href="#about"><span class="i18n-en">{{ n.about.en }}</span><span class="i18n-zh">{{ n.about.zh }}</span></a>
+  <a href="#news"><span class="i18n-en">{{ n.news.en }}</span><span class="i18n-zh">{{ n.news.zh }}</span></a>
+  <a href="#publications"><span class="i18n-en">{{ n.publications.en }}</span><span class="i18n-zh">{{ n.publications.zh }}</span></a>
+  {% if site.data.experience and site.data.experience.size > 0 %}
+  <a href="#experience"><span class="i18n-en">{{ n.experience.en }}</span><span class="i18n-zh">{{ n.experience.zh }}</span></a>
+  {% endif %}
+  {% if site.data.projects and site.data.projects.size > 0 %}
+  <a href="#projects"><span class="i18n-en">{{ n.projects.en }}</span><span class="i18n-zh">{{ n.projects.zh }}</span></a>
+  {% endif %}
+  {% if site.data.honors and site.data.honors.size > 0 %}
+  <a href="#honors"><span class="i18n-en">{{ n.honors.en }}</span><span class="i18n-zh">{{ n.honors.zh }}</span></a>
+  {% endif %}
+</nav>

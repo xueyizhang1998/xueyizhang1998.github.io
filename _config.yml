@@ -1,0 +1,39 @@
+# ============================================================
+#  Site configuration  —  Xueyi Zhang academic homepage
+#  站点全局配置。改站点标题、URL、默认语言都在这里。
+# ============================================================
+
+title: "Xueyi Zhang"
+tagline: "Academic Homepage"
+description: "Xueyi Zhang — Research Fellow at the National University of Singapore. AI safety, continual learning, and multimodal perception."
+lang: "en"                # 默认语言 en / zh（首次访问时的语言）
+
+# 论文展示方式：true = 按研究方向分组；false = 按年份倒序
+group_publications: true
+
+# 你的站点地址（用户页保持这个即可）
+url: "https://xueyizhang1998.github.io"
+baseurl: ""
+
+# ---- 构建设置（一般不用改）----
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - build_preview.py
+  - preview.html
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+# GitHub Pages 使用的插件（均为白名单内插件，无需本地依赖）
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

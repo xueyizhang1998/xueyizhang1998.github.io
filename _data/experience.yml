@@ -1,0 +1,124 @@
+# ============================================================
+#  Experience / 经历
+#  工作、学历、访学合并在一个版块，按时间倒序（最新在最上）。
+#  参考 Hankai Liu 的做法：合并后时间线一目了然，
+#  访学与读博时间重叠也不会显得对不上。
+# ------------------------------------------------------------
+#  字段说明：
+#    period   时间区间，用于显示
+#    sort     排序用的起始年月数字（YYYYMM），越大越靠上
+#    kind     类型：position（职位）/ degree（学位）/ visiting（访学）
+#    role     职位或学位名称
+#    org      机构
+#    dept     院系（可留空）
+#    location 所在地（可留空）
+#    advisor  导师（可留空）
+#    logo     学校图标：填 assets/img/logo/ 下的文件名；
+#             留空则自动用 abbr 的文字圆形占位
+#    abbr     机构缩写，用于文字占位图标
+# ============================================================
+
+- period: "2026.06 – Present"
+  sort: 202606
+  kind: position
+  role:
+    en: "Research Fellow (Postdoc)"
+    zh: "博士后研究员"
+  org:
+    en: "National University of Singapore"
+    zh: "新加坡国立大学"
+  dept:
+    en: ""
+    zh: ""
+  location:
+    en: "Singapore"
+    zh: "新加坡"
+  advisor:
+    en: "Supervisor: Prof. Jiaheng Zhang"
+    zh: "合作导师：Jiaheng Zhang 教授"
+  logo: "nus.png"
+  abbr: "NUS"
+
+- period: "2023.03 – Present"
+  sort: 202303
+  kind: visiting
+  role:
+    en: "Visiting Scholar"
+    zh: "访问学者"
+  org:
+    en: "The Chinese University of Hong Kong, Shenzhen"
+    zh: "香港中文大学（深圳）"
+  dept:
+    en: ""
+    zh: ""
+  location:
+    en: "Shenzhen, China"
+    zh: "中国深圳"
+  advisor:
+    en: ""
+    zh: ""
+  logo: "cuhk-sz.png"
+  abbr: "CUHK"
+
+- period: "2024.08 – 2025.08"
+  sort: 202408
+  kind: visiting
+  role:
+    en: "Joint-Training Ph.D. Student"
+    zh: "博士联合培养"
+  org:
+    en: "Nanyang Technological University"
+    zh: "南洋理工大学"
+  dept:
+    en: ""
+    zh: ""
+  location:
+    en: "Singapore"
+    zh: "新加坡"
+  advisor:
+    en: "Supervisor: Prof. Haizhou Li"
+    zh: "导师：李海洲 教授"
+  logo: "ntu.png"
+  abbr: "NTU"
+
+- period: "2020.09 – 2025.06"
+  sort: 202009
+  kind: degree
+  role:
+    en: "Ph.D. in Control Science and Engineering"
+    zh: "控制科学与工程 博士"
+  org:
+    en: "National University of Defense Technology"
+    zh: "国防科技大学"
+  dept:
+    en: ""
+    zh: ""
+  location:
+    en: "Changsha, China"
+    zh: "中国长沙"
+  advisor:
+    en: ""            # TODO: 补博士导师姓名
+    zh: ""
+  logo: "nudt.png"
+  abbr: "NUDT"
+
+- period: "2016.09 – 2020.06"
+  sort: 201609
+  kind: degree
+  role:
+    en: "B.Eng. in Electronic and Information Engineering"
+    zh: "电子信息工程 学士"
+  org:
+    en: "Dalian Maritime University"
+    zh: "大连海事大学"
+  dept:
+    en: ""
+    zh: ""
+  location:
+    en: "Dalian, China"
+    zh: "中国大连"
+  advisor:
+    en: ""
+    zh: ""
+  logo: "dmu.png"
+  abbr: "DMU"

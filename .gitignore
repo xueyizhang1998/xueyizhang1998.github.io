@@ -1,0 +1,33 @@
+# Jekyll 构建产物
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# 本地预览产物（由 build_preview.py 生成，无需入库）
+preview.html
+
+# Ruby / Bundler
+Gemfile.lock
+vendor/
+.bundle/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# sed -i.bak 的备份（deploy.sh 会自行删除，这里兜底防止误提交）
+*.bak
+
+# 非站点文件兜底：这些属于素材/交付包，不该发布到公开仓库
+# （正常情况下它们放在站点目录外的「主页素材与交付包/」里，
+#   这里挡一手，防止以后误拖进来被 deploy.sh 的 git add -A 一起推上去）
+*.zip
+学校图标/
+论文主图/
+我的主页-信息填写表.md
+给Codex的部署提示词.md
+预览效果参考.html

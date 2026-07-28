@@ -1,0 +1,14 @@
+# ============================================================
+#  Projects / 科研项目
+# ============================================================
+
+- period: ""
+  name:
+    en: "AI Security Defense and Evaluation Technologies"
+    zh: "人工智能安全防御与评估技术"
+  program:
+    en: "National Key R&D Program of China"
+    zh: "国家重点研发计划"
+  role:
+    en: "Core member"
+    zh: "核心成员"
