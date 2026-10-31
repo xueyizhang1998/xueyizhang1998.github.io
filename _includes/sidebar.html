@@ -1,6 +1,6 @@
 {%- assign p = site.data.profile -%}
 <aside class="sidebar">
-  <img class="avatar" src="{{ p.avatar | relative_url }}" alt="Portrait of Xueyi Zhang" width="600" height="798"
+  <img class="avatar" src="{{ p.avatar | relative_url }}?v={{ site.github.build_revision | default: site.asset_version }}" alt="Portrait of Xueyi Zhang" width="600" height="798"
        onerror="this.src='{{ '/assets/img/avatar-placeholder.svg' | relative_url }}'">
 
   <div class="name"><span class="i18n-en">{{ p.name.en }}</span><span class="i18n-zh">{{ p.name.zh }}</span></div>
@@ -36,6 +36,6 @@
   <div class="profile-links">
     {% if p.links.openreview %}<a href="{{ p.links.openreview }}" target="_blank" rel="noopener">OpenReview</a>{% endif %}
     {% if p.links.scopus %}<a href="{{ p.links.scopus }}" target="_blank" rel="noopener">Scopus</a>{% endif %}
-    {% if p.links.cv != "" %}<a href="{{ p.links.cv | relative_url }}" target="_blank" rel="noopener"><span class="i18n-en">Download CV</span><span class="i18n-zh">下载简历</span></a>{% endif %}
+    {% if p.links.cv != "" %}<a href="{{ p.links.cv | relative_url }}?v={{ site.github.build_revision | default: site.asset_version }}" target="_blank" rel="noopener"><span class="i18n-en">Download CV</span><span class="i18n-zh">下载简历</span></a>{% endif %}
   </div>
 </aside>

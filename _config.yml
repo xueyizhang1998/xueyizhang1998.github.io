@@ -15,6 +15,9 @@ group_publications: false
 url: "https://xueyizhang1998.github.io"
 baseurl: ""
 
+# 本地预览的资源版本；GitHub Pages 发布时自动使用当前提交版本。
+asset_version: "20261031-2"
+
 # ---- 构建设置（一般不用改）----
 markdown: kramdown
 highlighter: rouge
