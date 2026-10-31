@@ -17,7 +17,7 @@ layout: default
   </div>
   <div class="achievements">
     {% for a in site.data.about.achievements %}
-    <div><strong>{{ a.number }}</strong><span class="i18n-en">{{ a.en }}</span><span class="i18n-zh">{{ a.zh }}</span></div>
+    <div><strong>{{ a.number }}</strong><span class="metric-label i18n-en">{{ a.en }}</span><span class="metric-label i18n-zh">{{ a.zh }}</span>{% if a.detail %}<span class="metric-detail i18n-en">{{ a.detail.en }}</span><span class="metric-detail i18n-zh">{{ a.detail.zh }}</span>{% endif %}</div>
     {% endfor %}
   </div>
 </section>

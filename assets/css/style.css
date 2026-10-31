@@ -90,6 +90,8 @@ img { display: block; max-width: 100%; }
 .achievements > div:last-child { padding-right: 0; }
 .achievements strong { color: var(--accent); font-size: 1.7rem; font-weight: 650; line-height: 1.25; font-variant-numeric: tabular-nums; }
 .achievements span { margin-top: 5px; color: var(--text-soft); font-size: .74rem; line-height: 1.55; }
+.achievements .metric-label { font-size: .77rem; font-weight: 550; }
+.achievements .metric-detail { margin-top: 3px; color: var(--text-faint); font-size: .71rem; }
 
 /* News: quiet dates and a larger feature with original photographs. */
 .news { list-style: none; }
@@ -110,18 +112,18 @@ img { display: block; max-width: 100%; }
 .hint { color: var(--text-faint); font-size: .82rem; }
 .publication-intro { margin: -3px 0 18px; font-size: .85rem; color: var(--text-soft); }
 .publication-intro a { text-decoration: underline; text-decoration-color: #b8cce1; text-underline-offset: 3px; }
-.pub { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: center; gap: 28px; padding: 20px 0 20px 16px; margin-bottom: 12px; border-left: 3px solid #e5e9ee; }
+.pub { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: center; gap: 26px; padding: 18px 0 18px 16px; margin-bottom: 14px; border-left: 4px solid #e0e2e5; }
 .pub:last-child { margin-bottom: 0; }
 .pub .thumb { display: flex; align-items: center; justify-content: center; width: 300px; min-height: 125px; background: white; }
 .pub .thumb .zoom { display: flex; justify-content: center; align-items: center; width: 100%; border: 0; padding: 0; background: white; cursor: zoom-in; }
 .pub .thumb img { width: 100%; height: auto; max-height: 185px; object-fit: contain; background: white; }
 .pub .body { min-width: 0; }
-.pub .title { margin: 0 0 8px; font-size: 1rem; font-style: italic; font-weight: 650; line-height: 1.5; }
+.pub .title { margin: 0 0 8px; font-size: 1rem; font-style: italic; font-weight: 600; line-height: 1.45; }
 .pub .title a { color: var(--text); }
 .pub .title a:hover { color: var(--accent); }
-.pub .authors { margin-bottom: 7px; color: var(--text-soft); font-size: .82rem; line-height: 1.6; }
+.pub .authors { margin-bottom: 7px; color: var(--text-soft); font-size: .85rem; line-height: 1.6; }
 .pub .authors strong { color: #344155; font-weight: 650; }
-.pub .venue { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; color: #0756c9; font-style: italic; font-size: .89rem; font-weight: 650; line-height: 1.6; }
+.pub .venue { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; color: #004ff1; font-style: italic; font-size: .89rem; font-weight: 650; line-height: 1.6; }
 .pub .note { color: var(--text-faint); font-style: normal; font-size: .69rem; font-weight: 500; }
 .pub .note.oral { padding: 1px 6px; border-radius: 4px; color: #984321; background: #fff1e9; font-size: .7rem; font-weight: 650; line-height: 1.6; }
 .pub .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
@@ -131,8 +133,11 @@ img { display: block; max-width: 100%; }
   color: var(--accent); background: #fff; font-size: .76rem; font-weight: 550; line-height: 1.25;
   white-space: nowrap; text-decoration: none; transition: color .16s, background-color .16s, border-color .16s;
 }
-.pub .links a:first-child, .cv-link { background: var(--accent-weak); border-color: #c8d8e9; }
-.pub .links a:hover, .cv-link:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+.cv-link { background: var(--accent-weak); border-color: #c8d8e9; }
+.cv-link:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+.pub .links a { color: #34302a; background: #ffefb1; border-color: #e8d698; }
+.pub .links a:hover { color: #34302a; background: #ffe58a; border-color: #cfb263; }
+.pub .links a:focus-visible { outline-color: #a97b16; }
 .pub .links svg, .cv-link svg { display: block; flex: none; width: 14px; height: 14px; fill: currentColor; }
 .pub .links a:empty { display: none; }
 
@@ -244,6 +249,8 @@ html.lang-en .blk.i18n-en, html.lang-zh .blk.i18n-zh { display: block; }
   .achievements > div + div { padding-left: 12px; }
   .achievements strong { font-size: 1.4rem; }
   .achievements span { font-size: .67rem; }
+  .achievements .metric-label { font-size: .69rem; }
+  .achievements .metric-detail { font-size: .65rem; }
   .news li { grid-template-columns: minmax(0, 1fr); gap: 5px; padding-block: 13px; }
   .news .what { font-size: .86rem; }
   .news .date { font-size: .72rem; }

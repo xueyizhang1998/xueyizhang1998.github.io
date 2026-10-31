@@ -1,12 +1,10 @@
 - date: 2026.08.24
-  en: '<b>HELIX Corporate Lab launch at NUS.</b> Presented our research to NUS President Prof. Tan Eng Chye, Singapore’s
-    Senior Minister of State for Trade and Industry Ms Low Yen Ling, and STMicroelectronics Executive Vice President
-    Bertrand Stoltz. Our <b>real-time translation glasses</b> run large AI models on device for any-to-any translation
-    across <b>14 languages</b>, with latency of at most <b>200 ms</b> and no internet connection required. Demo
-    co-leads: Prof. Haizhou Li, Prof. Massimo Alioto, and Dr. Xueyi Zhang.'
-  zh: <b>HELIX 联合实验室在新加坡国立大学正式启动。</b>代表团队向新加坡国立大学校长陈永财教授、新加坡贸工部高级政务部长刘燕玲及意法半导体执行副总裁 Bertrand Stoltz 展示研究成果。演示的<b>实时
-    AI 翻译眼镜</b>在设备端运行大模型，支持 <b>14 种语言</b>任意互译与自然切换，延迟不超过 <b>200 毫秒</b>，无需联网。演示联合负责人：李海洲教授、Massimo Alioto 教授与 Xueyi
-    Zhang 博士。
+  en: <b>HELIX Corporate Lab launch at NUS.</b> At the launch, I presented our <b>on-device translation glasses</b>
+    with Haizhou Li and Massimo Alioto. The system supports translation across <b>14 languages</b> with latency
+    of at most <b>200 ms</b> and works without an internet connection. The demonstration was featured on NUS’s LinkedIn
+    and Instagram.
+  zh: <b>HELIX 联合实验室在新加坡国立大学启动。</b>与李海洲教授、Massimo Alioto 教授共同展示<b>端侧实时翻译眼镜</b>。系统支持 <b>14 种语言</b>互译，延迟不超过 <b>200
+    毫秒</b>，可离线运行。新加坡国立大学官方 LinkedIn 和 Instagram 发布了此次展示。
   links:
   - label: NUS · LinkedIn
     url: https://www.linkedin.com/posts/nusimpact-nusresearch-ugcPost-7497573875572961280-PjsM/
@@ -17,24 +15,25 @@
     en: HELIX lab launch
     zh: HELIX 实验室启动仪式
   - src: /assets/img/news/helix-presentation.jpg
-    en: Research presentation · Xueyi Zhang, far right
-    zh: 研究成果展示 · Xueyi Zhang 位于最右侧
+    en: Research demonstration · Xueyi Zhang, far right
+    zh: 研究成果演示 · 张雪毅位于最右侧
   - src: /assets/img/news/translation-glasses.jpg
     en: 14-language translation demo
     zh: 14 种语言实时翻译演示
 - date: '2026.06'
-  en: Joined the <b>National University of Singapore</b> as a Research Fellow.
+  en: I joined the <b>National University of Singapore</b> as a Research Fellow.
   zh: 加入<b>新加坡国立大学</b>，任博士后研究员（Research Fellow）。
 - date: '2026.01'
-  en: Our work on exemplar-free continual video action recognition was accepted to <b>AAAI 2026 (Oral)</b>.
-  zh: 无样本回放持续视频动作识别工作被 <b>AAAI 2026</b> 接收，并获 <b>Oral</b> 展示。
+  en: Our paper on exemplar-free continual video action recognition was selected for an <b>oral presentation at
+    AAAI 2026</b>.
+  zh: 无样本回放持续视频动作识别论文入选 <b>AAAI 2026 口头报告</b>。
 - date: '2025.09'
-  en: Our paper on multi-band sEEG auditory reconstruction is accepted to <b>NeurIPS 2025</b> (Datasets &amp; Benchmarks
+  en: Our paper on multi-band sEEG auditory reconstruction was accepted to <b>NeurIPS 2025</b> (Datasets and Benchmarks
     Track).
-  zh: 多频段 sEEG 听觉重建工作被 <b>NeurIPS 2025</b>（Datasets &amp; Benchmarks Track）接收。
+  zh: 多频段 sEEG 听觉重建论文被 <b>NeurIPS 2025</b> 数据集与基准赛道接收。
 - date: '2025.07'
-  en: Three papers accepted to <b>ACM Multimedia 2025</b>; one paper accepted to <b>ICCV 2025</b>.
+  en: Three papers were accepted to <b>ACM Multimedia 2025</b> and one to <b>ICCV 2025</b>.
   zh: 三篇论文被 <b>ACM Multimedia 2025</b> 接收，一篇论文被 <b>ICCV 2025</b> 接收。
 - date: '2025.06'
-  en: Received my Ph.D. from the <b>National University of Defense Technology</b>.
+  en: I received my Ph.D. from the <b>National University of Defense Technology</b>.
   zh: 于<b>国防科技大学</b>获得博士学位。

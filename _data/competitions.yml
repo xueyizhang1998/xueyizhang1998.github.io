@@ -5,7 +5,7 @@
     en: National · Top Five Finalist
     zh: 国家级 · 全国五强
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: iCAN Innovation & Entrepreneurship
@@ -14,7 +14,7 @@
     en: National · First Prize
     zh: 国家级 · 一等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: China Internet+ Innovation & Entrepreneurship
@@ -23,7 +23,7 @@
     en: National · Bronze
     zh: 国家级 · 铜奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Underwater Robotics · Fixed-Point Traversal
@@ -32,7 +32,7 @@
     en: International · Third Prize
     zh: 国际级 · 三等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Underwater Robotics · Fixed-Point Grasping
@@ -41,7 +41,7 @@
     en: International · Third Prize
     zh: 国际级 · 三等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: China Student Computer Design · AI
@@ -50,8 +50,8 @@
     en: National · Second Prize
     zh: 国家级 · 二等奖
   role:
-    en: Team position 2
-    zh: 团队排名 2
+    en: Team member (2nd)
+    zh: 团队成员（第 2 位）
 - name:
     en: China Student Computer Design · AI
     zh: 中国大学生计算机设计大赛 · 人工智能
@@ -59,8 +59,8 @@
     en: National · Second Prize
     zh: 国家级 · 二等奖
   role:
-    en: Team position 3
-    zh: 团队排名 3
+    en: Team member (3rd)
+    zh: 团队成员（第 3 位）
 - name:
     en: China Student Computer Design · Visualization
     zh: 中国大学生计算机设计大赛 · 可视化
@@ -68,8 +68,8 @@
     en: National · Third Prize
     zh: 国家级 · 三等奖
   role:
-    en: Team position 3
-    zh: 团队排名 3
+    en: Team member (3rd)
+    zh: 团队成员（第 3 位）
 - name:
     en: Huawei Cup Intelligent Design
     zh: 华为杯智能设计大赛
@@ -77,7 +77,7 @@
     en: National · Third Prize ×2
     zh: 国家级 · 三等奖 2 项
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Energy Conservation & Emission Reduction
@@ -86,7 +86,7 @@
     en: National · Third Prize ×2
     zh: 国家级 · 三等奖 2 项
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Challenge Cup · Academic Science & Technology
@@ -95,7 +95,7 @@
     en: Provincial · Grand Prize
     zh: 省级 · 特等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: China Internet+ Innovation & Entrepreneurship
@@ -104,7 +104,7 @@
     en: Provincial · Gold
     zh: 省级 · 金奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: iCAN Innovation & Entrepreneurship
@@ -113,7 +113,7 @@
     en: Provincial · First Prize
     zh: 省级 · 一等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: CCCC Network Technology · Central China
@@ -122,7 +122,7 @@
     en: Regional · Third Prize
     zh: 区域级 · 三等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Changsha Innovation & Entrepreneurship · Postgraduate
@@ -131,7 +131,7 @@
     en: Municipal · First Prize
     zh: 市级 · 一等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Huawei Cup Graduate Mathematical Modeling
@@ -140,7 +140,7 @@
     en: National · Second Prize
     zh: 国家级 · 二等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长
 - name:
     en: Teddy Cup Data Analysis Skills
@@ -149,5 +149,5 @@
     en: National · Second Prize
     zh: 国家级 · 二等奖
   role:
-    en: Captain
+    en: Team captain
     zh: 队长

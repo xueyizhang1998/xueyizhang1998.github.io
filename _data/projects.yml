@@ -6,16 +6,16 @@
     en: The Chinese University of Hong Kong, Shenzhen
     zh: 香港中文大学（深圳）
   role:
-    en: Working with Prof. Haizhou Li.
-    zh: 与李海洲教授合作。
+    en: With Haizhou Li
+    zh: 与李海洲教授合作
   description:
-    en: 'Inspired by Daniel Kahneman’s Thinking, Fast and Slow, the robot combines fast and slow responses for natural
-      full-duplex conversation: it listens while speaking and supports interruptions. Speech, facial expressions,
-      gaze, and posture guide empathetic responses, expressive faces, and head/gaze tracking.'
-    zh: 受丹尼尔·卡尼曼《思考，快与慢》启发，结合快慢响应，实现边说边听、支持自然打断的全双工对话。融合语音、面部表情、视线与姿态线索，协调共情语音、表情及头部／视线跟踪。
+    en: Developed a full-duplex dialogue robot that listens while speaking and supports natural interruptions. It
+      combines fast and slow response mechanisms and uses speech, facial expressions, gaze, and posture to infer
+      emotion, guiding empathetic speech and coordinated nonverbal behavior.
+    zh: 研发支持边说边听与自然打断的全双工对话机器人。系统结合快慢响应机制，从语音、表情、视线和姿态中识别情绪，协调共情语音、表情及头部与视线反馈。
   note:
-    en: 'Related manuscript: Full-Duplex Affective Dialogue Robot (under review).'
-    zh: 相关论文：Full-Duplex Affective Dialogue Robot（审稿中）。
+    en: Related manuscript under review.
+    zh: 相关论文正在审稿。
 - period: ''
   name:
     en: AI Security Defense and Evaluation Technologies
@@ -24,5 +24,5 @@
     en: National Key R&D Program of China
     zh: 国家重点研发计划
   role:
-    en: Core member
+    en: Core team member
     zh: 核心成员

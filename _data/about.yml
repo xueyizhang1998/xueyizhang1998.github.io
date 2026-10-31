@@ -1,22 +1,20 @@
 bio:
-  en: I am a <b>Research Fellow</b> at the <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">School
-    of Computing, National University of Singapore</a>, working with <a href="https://zjhzjh123.github.io/" target="_blank"
-    rel="noopener">Jiaheng Zhang</a> and <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng
-    He</a> (IEEE Fellow). I also collaborate with <a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank"
-    rel="noopener">Haizhou Li</a> (IEEE Fellow; Singapore Academy of Engineering Fellow) and <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
-    target="_blank" rel="noopener">Nitin Chawla</a> (ST Fellow; Director of Edge AI, STMicroelectronics).<br><br>Previously,
-    I was a Research Assistant at <b>The Chinese University of Hong Kong, Shenzhen</b> (March 2023–June 2026), working
-    with Prof. Haizhou Li. I received my Ph.D. in Control Science and Engineering from the <b>National University
-    of Defense Technology</b> (2020–2025) and my B.Eng. in Electronic Information Engineering from <b>Dalian Maritime
-    University</b> (2016–2020).<br><br>My research focuses on <b>AI safety, continual learning, and multimodal perception</b>,
-    including generalizable deepfake detection, robust learning with noisy labels, lip reading, neural signal decoding,
-    and efficient wearable AI.
-  zh: 我是<b>新加坡国立大学计算机学院</b>博士后研究员（Research Fellow），与 <a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener">Jiaheng
-    Zhang</a> 和 <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng He</a>（IEEE
-    Fellow）合作。同时，与<a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank" rel="noopener">李海洲教授</a>（IEEE
-    Fellow、新加坡工程院院士）及 <a href="https://in.linkedin.com/in/nitin-chawla-7081659" target="_blank" rel="noopener">Nitin
-    Chawla</a>（ST Fellow、意法半导体边缘 AI 总监）开展合作。<br><br>此前，我于 2023 年 3 月至 2026 年 6 月在<b>香港中文大学（深圳）</b>担任研究助理，与李海洲教授合作。2020–2025
-    年在<b>国防科技大学</b>攻读控制科学与工程博士学位；2016–2020 年在<b>大连海事大学</b>获得电子信息工程学士学位。<br><br>我的研究聚焦<b>人工智能安全、持续学习与多模态感知</b>，涵盖可泛化的深度伪造检测、噪声标签下的鲁棒学习、唇语识别、神经信号解码及高效可穿戴人工智能。
+  en: I am a <b>Research Fellow</b> in the <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">School
+    of Computing at the National University of Singapore (NUS)</a>, working with <a href="https://zjhzjh123.github.io/"
+    target="_blank" rel="noopener">Jiaheng Zhang</a> and <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank"
+    rel="noopener">Bingsheng He</a>. I also collaborate with <a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/"
+    target="_blank" rel="noopener">Haizhou Li</a> and <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
+    target="_blank" rel="noopener">Nitin Chawla</a> (STMicroelectronics).<br><br>My research focuses on <b>AI safety,
+    continual learning, and multimodal perception</b>. I develop methods for learning from evolving data and noisy
+    supervision, with applications in deepfake detection, lip reading, neural signal decoding, and wearable AI.<br><br>Before
+    joining NUS, I was a Research Assistant at <b>The Chinese University of Hong Kong, Shenzhen</b>. I received
+    my Ph.D. in Control Science and Engineering from the <b>National University of Defense Technology</b> in 2025
+    and my B.Eng. in Electronic Information Engineering from <b>Dalian Maritime University</b> in 2020.
+  zh: 我现任<b>新加坡国立大学计算机学院</b>博士后研究员（Research Fellow），与 <a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener">Jiaheng
+    Zhang</a> 和 <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng He</a> 合作，并与<a
+    href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank" rel="noopener">李海洲教授</a>及意法半导体的 <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
+    target="_blank" rel="noopener">Nitin Chawla</a> 开展合作。<br><br>我的研究聚焦<b>人工智能安全、持续学习与多模态感知</b>，关注数据与任务变化、噪声监督条件下的可靠学习，应用涵盖深度伪造检测、唇语识别、神经信号解码和可穿戴
+    AI。<br><br>此前，我在<b>香港中文大学（深圳）</b>担任研究助理。2025 年于<b>国防科技大学</b>获得控制科学与工程博士学位，2020 年于<b>大连海事大学</b>获得电子信息工程学士学位。
 keywords:
   en:
   - AI Safety
@@ -30,11 +28,20 @@ keywords:
   - 可穿戴 AI
 achievements:
 - number: '17'
-  en: publications · including 5 first-author oral papers
-  zh: 篇论文 · 含 5 篇第一作者 Oral 论文
+  en: Publications
+  zh: 篇论文
+  detail:
+    en: 5 first-author oral presentations
+    zh: 5 篇第一作者论文入选口头报告
 - number: '25'
-  en: published patent applications · 20 granted
-  zh: 项已公开专利申请 · 20 项已授权
+  en: Patent applications
+  zh: 项专利申请
+  detail:
+    en: Published · 20 granted
+    zh: 已公开 · 20 项已授权
 - number: '19'
-  en: competition honors and distinctions
-  zh: 项竞赛荣誉与奖励
+  en: Competition awards
+  zh: 项竞赛奖励
+  detail:
+    en: 12 in national competitions
+    zh: 其中国家级竞赛奖励 12 项

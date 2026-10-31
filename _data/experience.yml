@@ -2,7 +2,7 @@
   sort: 202606
   kind: position
   role:
-    en: Research Fellow (Postdoc)
+    en: Research Fellow
     zh: 博士后研究员
   org:
     en: National University of Singapore
@@ -14,8 +14,8 @@
     en: Singapore
     zh: 新加坡
   advisor:
-    en: Working with Jiaheng Zhang and Bingsheng He (IEEE Fellow).
-    zh: 与 Jiaheng Zhang 和 Bingsheng He（IEEE Fellow）合作。
+    en: With Jiaheng Zhang and Bingsheng He
+    zh: 与 Jiaheng Zhang 和 Bingsheng He 合作
   logo: nus.png
   abbr: NUS
 - period: 2023.03 – 2026.06
@@ -34,8 +34,8 @@
     en: Shenzhen, China
     zh: 中国深圳
   advisor:
-    en: Working with Prof. Haizhou Li.
-    zh: 与李海洲教授合作。
+    en: With Haizhou Li
+    zh: 与李海洲教授合作
   logo: cuhk-sz.png
   abbr: CUHK
 - period: 2024.08 – 2025.08
@@ -54,8 +54,8 @@
     en: Singapore
     zh: 新加坡
   advisor:
-    en: 'Supervisor: Prof. Haizhou Li'
-    zh: 导师：李海洲 教授
+    en: 'Supervisor: Haizhou Li'
+    zh: 导师：李海洲教授
   logo: ntu.png
   abbr: NTU
 - period: 2020.09 – 2025.06
@@ -82,7 +82,7 @@
   sort: 201609
   kind: degree
   role:
-    en: B.Eng. in Electronic and Information Engineering
+    en: B.Eng. in Electronic Information Engineering
     zh: 电子信息工程 学士
   org:
     en: Dalian Maritime University

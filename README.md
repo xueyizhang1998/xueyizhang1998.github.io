@@ -50,7 +50,7 @@ Styles, scripts, the portrait, and the CV use the GitHub build revision in their
 - Responsive publication rows with complete, uncropped method diagrams.
 - Figure viewer with keyboard focus handling and Escape to close.
 - Native expandable competition-award details.
-- White background, restrained blue type, thin section rules, and consistent resource buttons.
+- White background, restrained blue type, thin section rules, and consistent pale-yellow publication buttons.
 - Active-section navigation, keyboard focus indicators, and a compact profile layout on phones.
 
 The typography and information hierarchy were refined after reviewing the academic homepages of [Jon Barron](https://jonbarron.info/), [Piotr Dollár](https://pdollar.github.io/), [Kaiming He](https://people.csail.mit.edu/kaiming/), [Phillip Isola](https://web.mit.edu/phillipi/), [Jiaheng Zhang](https://zjhzjh123.github.io/), [Ziwei Liu](https://liuziwei7.github.io/), and [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/).
