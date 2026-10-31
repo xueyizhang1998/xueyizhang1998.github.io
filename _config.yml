@@ -9,7 +9,7 @@ description: "Xueyi Zhang — Research Fellow at the National University of Sing
 lang: "en"                # 默认语言 en / zh（首次访问时的语言）
 
 # 论文展示方式：true = 按研究方向分组；false = 按年份倒序
-group_publications: true
+group_publications: false
 
 # 你的站点地址（用户页保持这个即可）
 url: "https://xueyizhang1998.github.io"
@@ -28,6 +28,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - build_preview.py
+  - build_preview.rb
+  - deploy.sh
   - preview.html
   - vendor
   - .sass-cache

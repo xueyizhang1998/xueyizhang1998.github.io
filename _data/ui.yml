@@ -1,37 +1,93 @@
-# ============================================================
-#  界面文案 / UI strings —— 各版块标题、按钮文字（双语）
-# ============================================================
-
 nav:
-  about:        { en: "About",        zh: "关于" }
-  news:         { en: "News",         zh: "动态" }
-  publications: { en: "Publications", zh: "论文" }
-  experience:   { en: "Experience",   zh: "教育与经历" }
-  projects:     { en: "Projects",     zh: "科研项目" }
-  honors:       { en: "Honors",       zh: "荣誉奖励" }
-
+  about:
+    en: About
+    zh: 关于
+  news:
+    en: News
+    zh: 动态
+  publications:
+    en: Selected Publications
+    zh: 代表性论文
+  experience:
+    en: Experience
+    zh: 教育与经历
+  projects:
+    en: Projects
+    zh: 科研项目
+  honors:
+    en: Honors
+    zh: 荣誉奖励
+  service:
+    en: Service
+    zh: 学术服务
 labels:
-  selected_pubs: { en: "Selected Publications", zh: "代表性论文" }
-  all_pubs:      { en: "All Publications",      zh: "全部论文" }
-  by_topic:      { en: "By Research Topic",     zh: "按研究方向" }
-  show_all:      { en: "Show all",              zh: "展开全部" }
-  show_less:     { en: "Show less",             zh: "收起" }
-  email:         { en: "Email",                 zh: "邮箱" }
-  interests:     { en: "Research Interests",    zh: "研究兴趣" }
-  first_author:  { en: "First-author papers.",  zh: "以下均为第一作者论文。" }
-  zoom:          { en: "click to enlarge",      zh: "点击放大" }
-  close:         { en: "Close",                 zh: "关闭" }
-
-# 经历类型徽标文案
+  selected_pubs:
+    en: Selected Publications
+    zh: 代表性论文
+  all_pubs:
+    en: All Publications
+    zh: 全部论文
+  by_topic:
+    en: By Research Topic
+    zh: 按研究方向
+  show_all:
+    en: Show all
+    zh: 展开全部
+  show_less:
+    en: Show less
+    zh: 收起
+  email:
+    en: Email
+    zh: 邮箱
+  interests:
+    en: Research Interests
+    zh: 研究兴趣
+  first_author:
+    en: First-author papers.
+    zh: 以下均为第一作者论文。
+  zoom:
+    en: click to enlarge
+    zh: 点击放大
+  close:
+    en: Close
+    zh: 关闭
+  publication_intro:
+    en: First-author research highlights. See <a href="https://scholar.google.com/citations?user=-hFq7VAAAAAJ" target="_blank"
+      rel="noopener">Google Scholar</a> for the full publication list.
+    zh: 以下为第一作者代表性论文，完整列表请见 <a href="https://scholar.google.com/citations?user=-hFq7VAAAAAJ" target="_blank" rel="noopener">Google
+      Scholar</a>。
+  competition_summary:
+    en: '19 competition honors: 12 national, 3 provincial, 2 international, 1 regional, and 1 municipal.'
+    zh: 19 项竞赛荣誉：国家级 12 项、省级 3 项、国际级 2 项、区域级 1 项、市级 1 项。
+  competition_details:
+    en: View competition awards
+    zh: 查看竞赛获奖明细
 kinds:
-  position: { en: "",         zh: "" }
-  degree:   { en: "",         zh: "" }
-  visiting: { en: "Visiting", zh: "访学" }
-
+  position:
+    en: ''
+    zh: ''
+  degree:
+    en: ''
+    zh: ''
+  visiting:
+    en: Visiting
+    zh: 访学
 buttons:
-  paper:   { en: "Paper",   zh: "论文" }
-  code:    { en: "Code",    zh: "代码" }
-  project: { en: "Project", zh: "项目" }
-  doi:     { en: "DOI",     zh: "DOI" }
-  bibtex:  { en: "BibTeX",  zh: "BibTeX" }
-  video:   { en: "Video",   zh: "视频" }
+  paper:
+    en: Paper
+    zh: 论文
+  code:
+    en: Code
+    zh: 代码
+  project:
+    en: Project
+    zh: 项目
+  doi:
+    en: DOI
+    zh: DOI
+  bibtex:
+    en: BibTeX
+    zh: BibTeX
+  video:
+    en: Video
+    zh: 视频

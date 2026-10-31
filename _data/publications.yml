@@ -1,168 +1,152 @@
-# ============================================================
-#  Publications / 论文（均为第一作者，来源 DBLP pid 90/10666-1）
-# ------------------------------------------------------------
-#  字段说明（新增论文时复制一个 "- title:" 块）：
-#    title      论文标题
-#    authors    作者列表；用 **名字** 包住会自动加粗
-#    venue      会议/期刊 + 年份
-#    year       年份（只用于显示，不参与排序）
-#    order      ★必填★ 显示顺序，数字越大越靠前。现有值按 10 递增（10~100），
-#               插一篇到中间就用中间值（如 75）。漏填当成 0，会掉到最底下。
-#               为什么不用 year 排序：同年论文会并列，Jekyll 的排序对并列项
-#               顺序不保证稳定，线上和本地预览可能不一致，所以用唯一的 order。
-#    group      所属研究方向，对应 pub_groups.yml 里的 id
-#    selected   true = 代表作（显示 ★，并出现在“代表性论文”区）
-#    image      主图/teaser 路径，如 /assets/img/pub/xxx.jpg；留空显示占位
-#    tags       小标签数组
-#    desc       一句话贡献要点（中英各一版，可留空）
-#    links:     只填有的；paper/code/project/doi/bibtex/video
-#               paper 建议优先填免费全文（arXiv / CVF / ACL Anthology / 官方 PDF），
-#               doi 单独填正式 DOI；两者都有时会显示两个按钮，DOI 那个是灰色次要样式。
-#               若 paper 本身就是 doi.org 链接，就不用再填 doi，免得重复。
-#    note       备注，如 Oral / Spotlight / Datasets & Benchmarks Track
-#
-#  注意：仅 NeuroListen 与 CSLR 两篇有已验证的官方代码仓库，
-#        其余论文暂未找到公开官方仓库，故不设 code 链接（勿臆造）。
-# ============================================================
-
-# ---------- 持续学习与深度伪造检测 ----------
-- title: "Generalization-Preserved Learning: Closing the Backdoor to Catastrophic Forgetting in Continual Deepfake Detection"
-  authors: "**Xueyi Zhang**, Peiyin Zhu, Chengwei Zhang, Zhiyuan Yan, Jikang Cheng, Mingrui Lao, Siqi Cai, Yanming Guo"
-  venue: "ICCV 2025"
+- title: 'Generalization-Preserved Learning: Closing the Backdoor to Catastrophic Forgetting in Continual Deepfake
+    Detection'
+  authors: '**Xueyi Zhang**, Peiyin Zhu, Chengwei Zhang, Zhiyuan Yan, Jikang Cheng, Mingrui Lao, Siqi Cai, Yanming
+    Guo'
+  venue: ICCV 2025
   year: 2025
-  order: 80   # 显示顺序，越大越靠前
+  order: 80
   group: continual
   selected: true
-  image: "/assets/img/pub/generalization-preserved.jpg"
-  tags: ["Continual Learning", "Deepfake Detection"]
+  image: /assets/img/pub/generalization-preserved.png
+  tags:
+  - Continual Learning
+  - Deepfake Detection
   desc:
-    en: "Closes the backdoor to catastrophic forgetting while preserving generalization in continual deepfake detection."
-    zh: "在持续深度伪造检测中抑制灾难性遗忘，同时保持模型泛化能力。"
+    en: Closes the backdoor to catastrophic forgetting while preserving generalization in continual deepfake detection.
+    zh: 在持续深度伪造检测中抑制灾难性遗忘，同时保持模型泛化能力。
   links:
-    # paper 用 CVF 开放获取版（免费全文），doi 用 IEEE 正式记录
-    paper: "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Generalization-Preserved_Learning_Closing_the_Backdoor_to_Catastrophic_Forgetting_in_Continual_ICCV_2025_paper.pdf"
-    doi: "https://doi.org/10.1109/ICCV51701.2025.00362"
-  note: ""
-
-- title: "Choose Your Expert: Uncertainty-Guided Expert Selection for Continual Deepfake Detection"
-  authors: "**Xueyi Zhang**, Peiyin Zhu, Jinping Sui, Xiaoda Yang, Jiahe Tian, Mingrui Lao, Siqi Cai, Yanming Guo, Jun Tang"
-  venue: "ACM Multimedia 2025"
+    paper: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Generalization-Preserved_Learning_Closing_the_Backdoor_to_Catastrophic_Forgetting_in_Continual_ICCV_2025_paper.pdf
+    doi: https://doi.org/10.1109/ICCV51701.2025.00362
+  note: ''
+- title: 'Choose Your Expert: Uncertainty-Guided Expert Selection for Continual Deepfake Detection'
+  authors: '**Xueyi Zhang**, Peiyin Zhu, Jinping Sui, Xiaoda Yang, Jiahe Tian, Mingrui Lao, Siqi Cai, Yanming Guo,
+    Jun Tang'
+  venue: ACM Multimedia 2025
   year: 2025
-  order: 70   # 显示顺序，越大越靠前
+  order: 70
   group: continual
-  selected: false
-  image: "/assets/img/pub/choose-your-expert.jpg"
-  tags: ["Continual Learning", "Deepfake Detection", "Mixture-of-Experts"]
+  selected: true
+  image: /assets/img/pub/choose-your-expert.png
+  tags:
+  - Continual Learning
+  - Deepfake Detection
+  - Mixture-of-Experts
   desc:
-    en: "Selects experts under uncertainty guidance for continual deepfake detection."
-    zh: "以不确定性为引导进行专家选择，用于持续深度伪造检测。"
+    en: Selects experts under uncertainty guidance for continual deepfake detection.
+    zh: 以不确定性为引导进行专家选择，用于持续深度伪造检测。
   links:
-    paper: "https://doi.org/10.1145/3746027.3755398"
-  note: ""
-
-- title: "Rep Deep & Machine Learning: Exemplar-Free Continual Video Action Recognition via Slow-Fast Collaborative Learning"
-  authors: "**Xueyi Zhang**, Chengwei Zhang, Zheng Li, Xiyu Wang, Siqi Cai, Mingrui Lao, Yanming Guo, Huiping Zhuang"
-  venue: "AAAI 2026"
+    paper: https://doi.org/10.1145/3746027.3755398
+  note: Oral
+- title: 'Rep Deep & Machine Learning: Exemplar-Free Continual Video Action Recognition via Slow-Fast Collaborative
+    Learning'
+  authors: '**Xueyi Zhang**, Chengwei Zhang, Zheng Li, Xiyu Wang, Siqi Cai, Mingrui Lao, Yanming Guo, Huiping Zhuang'
+  venue: AAAI 2026
   year: 2026
-  order: 100   # 显示顺序，越大越靠前
+  order: 100
   group: continual
-  selected: false
-  image: "/assets/img/pub/repdml.jpg"
-  tags: ["Continual Learning", "Action Recognition"]
+  selected: true
+  image: /assets/img/pub/repdml.png
+  tags:
+  - Continual Learning
+  - Action Recognition
   desc:
-    en: "Exemplar-free continual video action recognition via slow-fast collaborative learning."
-    zh: "通过慢-快协同学习实现无样本回放的持续视频动作识别。"
+    en: Exemplar-free continual video action recognition via slow-fast collaborative learning.
+    zh: 通过慢-快协同学习实现无样本回放的持续视频动作识别。
   links:
-    # paper 用 AAAI OJS 直链 PDF（免费全文），doi 指向同一篇的正式记录
-    paper: "https://ojs.aaai.org/index.php/AAAI/article/download/40924/44885"
-    doi: "https://doi.org/10.1609/aaai.v40i42.40924"
-  note: ""
-
-- title: "Slow-Fast Time Parameter Aggregation Network for Class-Incremental Lip Reading"
-  authors: "**Xueyi Zhang**, Chengwei Zhang, Tao Wang, Jun Tang, Songyang Lao, Haizhou Li"
-  venue: "ACM Multimedia 2023"
+    paper: https://ojs.aaai.org/index.php/AAAI/article/download/40924/44885
+    doi: https://doi.org/10.1609/aaai.v40i42.40924
+  note: Oral
+- title: Slow-Fast Time Parameter Aggregation Network for Class-Incremental Lip Reading
+  authors: '**Xueyi Zhang**, Chengwei Zhang, Tao Wang, Jun Tang, Songyang Lao, Haizhou Li'
+  venue: ACM Multimedia 2023
   year: 2023
-  order: 20   # 显示顺序，越大越靠前
+  order: 20
   group: continual
-  selected: false
-  image: "/assets/img/pub/slow-fast-tpa.jpg"
-  tags: ["Class-Incremental", "Lip Reading"]
+  selected: true
+  image: /assets/img/pub/slow-fast-tpa.png
+  tags:
+  - Class-Incremental
+  - Lip Reading
   desc:
-    en: "Slow-fast time parameter aggregation for class-incremental lip reading."
-    zh: "面向类增量唇语识别的慢-快时间参数聚合网络。"
+    en: Slow-fast time parameter aggregation for class-incremental lip reading.
+    zh: 面向类增量唇语识别的慢-快时间参数聚合网络。
   links:
-    paper: "https://doi.org/10.1145/3581783.3612460"
-  note: ""
-
-# ---------- 唇语识别与多模态感知 ----------
-- title: "Language Without Borders: A Dataset and Benchmark for Code-Switching Lip Reading"
-  authors: "**Xueyi Zhang**, Mingrui Lao, Peng Zhao, Jun Tang, Yanming Guo, Siqi Cai, Xianghu Yue, Haizhou Li"
-  venue: "NeurIPS 2024"
+    paper: https://doi.org/10.1145/3581783.3612460
+  note: Oral
+- title: 'Language Without Borders: A Dataset and Benchmark for Code-Switching Lip Reading'
+  authors: '**Xueyi Zhang**, Chengwei Zhang, Mingrui Lao, Peng Zhao, Jun Tang, Yanming Guo, Siqi Cai, Xianghu Yue,
+    Haizhou Li'
+  venue: NeurIPS 2024
   year: 2024
-  order: 30   # 显示顺序，越大越靠前
+  order: 30
   group: multimodal
   selected: true
-  image: "/assets/img/pub/language-without-borders.jpg"
-  tags: ["Dataset & Benchmark", "Lip Reading", "Code-Switching"]
+  image: /assets/img/pub/language-without-borders.png
+  tags:
+  - Dataset & Benchmark
+  - Lip Reading
+  - Code-Switching
   desc:
-    en: "A dataset and benchmark for code-switching lip reading across languages."
-    zh: "面向跨语言语码转换唇语识别的数据集与基准。"
+    en: A dataset and benchmark for code-switching lip reading across languages.
+    zh: 面向跨语言语码转换唇语识别的数据集与基准。
   links:
-    # paper 用 NeurIPS 官方页（免费全文），doi 指 Curran 印刷版论文集（付费）
-    paper: "https://papers.nips.cc/paper_files/paper/2024/hash/36d4b4c04d07974fe7d455d62783ac22-Abstract-Datasets_and_Benchmarks_Track.html"
-    doi: "https://doi.org/10.52202/079017-0967"
-    code: "https://github.com/cslr-lipreading/CSLR"
-  note: "Datasets & Benchmarks Track"
-
-- title: "EventLip: Enhancing Event-Based Lip Reading via Frequency-Aware Spatiotemporal Hypergraph Modeling"
-  authors: "**Xueyi Zhang**, Jialu Sun, Chengwei Zhang, Xianghu Yue, Tianfang Xiao, Siqi Cai, Mingrui Lao, Haizhou Li"
-  venue: "ACM Multimedia 2025"
+    paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/36d4b4c04d07974fe7d455d62783ac22-Abstract-Datasets_and_Benchmarks_Track.html
+    doi: https://doi.org/10.52202/079017-0967
+    code: https://github.com/cslr-lipreading/CSLR
+  note: Datasets & Benchmarks Track
+- title: 'EventLip: Enhancing Event-Based Lip Reading via Frequency-Aware Spatiotemporal Hypergraph Modeling'
+  authors: '**Xueyi Zhang**, Jialu Sun, Chengwei Zhang, Xianghu Yue, Tianfang Xiao, Siqi Cai, Mingrui Lao, Haizhou
+    Li'
+  venue: ACM Multimedia 2025
   year: 2025
-  order: 60   # 显示顺序，越大越靠前
+  order: 60
   group: multimodal
-  selected: false
-  image: "/assets/img/pub/eventlip.jpg"
-  tags: ["Event Camera", "Lip Reading", "Hypergraph"]
+  selected: true
+  image: /assets/img/pub/eventlip.png
+  tags:
+  - Event Camera
+  - Lip Reading
+  - Hypergraph
   desc:
-    en: "Frequency-aware spatiotemporal hypergraph modeling for event-based lip reading."
-    zh: "面向事件相机唇语识别的频率感知时空超图建模。"
+    en: Frequency-aware spatiotemporal hypergraph modeling for event-based lip reading.
+    zh: 面向事件相机唇语识别的频率感知时空超图建模。
   links:
-    paper: "https://doi.org/10.1145/3746027.3755404"
-  note: ""
-
-# ---------- 神经信号解码 ----------
-- title: "Listening to the Brain: Multi-Band sEEG Auditory Reconstruction via Dynamic Spatio-Temporal Hypergraphs"
-  authors: "**Xueyi Zhang**, Ruicong Wang, Jialu Sun, Siqi Cai, Haizhou Li"
-  venue: "NeurIPS 2025"
+    paper: https://doi.org/10.1145/3746027.3755404
+  note: ''
+- title: 'Listening to the Brain: Multi-Band sEEG Auditory Reconstruction via Dynamic Spatio-Temporal Hypergraphs'
+  authors: '**Xueyi Zhang**, Ruicong Wang, Jialu Sun, Siqi Cai, Haizhou Li'
+  venue: NeurIPS 2025
   year: 2025
-  order: 50   # 显示顺序，越大越靠前
+  order: 50
   group: neuro
   selected: true
-  image: "/assets/img/pub/listening-to-brain.jpg"
-  tags: ["sEEG", "Auditory Reconstruction", "Hypergraph"]
+  image: /assets/img/pub/listening-to-brain.png
+  tags:
+  - sEEG
+  - Auditory Reconstruction
+  - Hypergraph
   desc:
-    en: "Reconstructs auditory signals from multi-band sEEG via dynamic spatio-temporal hypergraphs."
-    zh: "通过动态时空超图从多频段 sEEG 重建听觉信号。"
+    en: Reconstructs auditory signals from multi-band sEEG via dynamic spatio-temporal hypergraphs.
+    zh: 通过动态时空超图从多频段 sEEG 重建听觉信号。
   links:
-    # 本文无正式 DOI：NeurIPS 页面与 DBLP 均未收录，
-    # Zenodo 存档 DOI 不等同于论文 DOI，故不填 doi 字段。
-    paper: "https://papers.nips.cc/paper_files/paper/2025/hash/bbc6396ae4b4dbf78ce328aa8beafd27-Abstract-Datasets_and_Benchmarks_Track.html"
-    code: "https://github.com/NeuroListen/NeuroListen"
-  note: "Datasets & Benchmarks Track"
-
-# ---------- 鲁棒学习与高效适配 ----------
-- title: "TrustCLIP: Learning from Noisy Labels via Semantic Label Verification and Trust-aligned Gradient Projection"
-  authors: "**Xueyi Zhang**, Peiyin Zhu, Yuan Liao, Xiyu Wang, Mingrui Lao, Siqi Cai, Yanming Guo, Haizhou Li"
-  venue: "ACM Multimedia 2025"
+    paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/bbc6396ae4b4dbf78ce328aa8beafd27-Abstract-Datasets_and_Benchmarks_Track.html
+    code: https://github.com/NeuroListen/NeuroListen
+  note: Datasets & Benchmarks Track
+- title: 'TrustCLIP: Learning from Noisy Labels via Semantic Label Verification and Trust-aligned Gradient Projection'
+  authors: '**Xueyi Zhang**, Peiyin Zhu, Yuan Liao, Xiyu Wang, Mingrui Lao, Siqi Cai, Yanming Guo, Haizhou Li'
+  venue: ACM Multimedia 2025
   year: 2025
-  order: 40   # 显示顺序，越大越靠前
+  order: 40
   group: robust
-  selected: false
-  image: "/assets/img/pub/trustclip.jpg"
-  tags: ["Noisy Labels", "CLIP", "Robust Learning"]
+  selected: true
+  image: /assets/img/pub/trustclip.png
+  tags:
+  - Noisy Labels
+  - CLIP
+  - Robust Learning
   desc:
-    en: "Learns from noisy labels with semantic label verification and trust-aligned gradient projection."
-    zh: "通过语义标签验证与信任对齐的梯度投影，实现噪声标签下的鲁棒学习。"
+    en: Learns from noisy labels with semantic label verification and trust-aligned gradient projection.
+    zh: 通过语义标签验证与信任对齐的梯度投影，实现噪声标签下的鲁棒学习。
   links:
-    paper: "https://doi.org/10.1145/3746027.3755415"
-  note: ""
+    paper: https://doi.org/10.1145/3746027.3755415
+  note: Oral

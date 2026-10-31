@@ -22,7 +22,7 @@
 /* ---------- 全局重置 ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-clearance, 5rem); }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
@@ -43,8 +43,8 @@ img { max-width: 100%; display: block; }
 /* ---------- 布局：左栏固定 + 右正文 ---------- */
 .layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  max-width: 1180px;
+  grid-template-columns: 260px 1fr;
+  max-width: 1280px;
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -61,7 +61,7 @@ img { max-width: 100%; display: block; }
 }
 
 .main {
-  padding: 2.6rem 3rem 4rem;
+  padding: 2.6rem 2.5rem 4rem;
   min-width: 0;
 }
 
@@ -91,8 +91,8 @@ img { max-width: 100%; display: block; }
 /* ---------- 侧栏个人卡片 ---------- */
 /* 头像：圆角方形（参考 PRISM 的克制感），想要圆形把 border-radius 改成 50% */
 .avatar {
-  width: 176px; height: 176px;
-  border-radius: 18px;
+  width: 160px; height: 213px;
+  border-radius: 4px;
   object-fit: cover;
   margin: 0 auto 1.2rem;
   box-shadow: 0 2px 12px rgba(30,45,70,.10);
@@ -244,41 +244,40 @@ img { max-width: 100%; display: block; }
 .proj-card .pprog { color: var(--accent); font-size: .88rem; margin-top: .15rem; }
 .proj-card .prole { color: var(--text-faint); font-size: .85rem; margin-top: .15rem; }
 
-/* ---------- 论文卡片 ---------- */
+/* Publications: method figure and compact text, inspired by Zhiyuan Yan. */
+.publication-intro { margin-bottom: 1.2rem; font-size: .9rem; color: var(--text-soft); }
 .pub {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 1.2rem;
-  padding: 1.1rem;
-  margin-bottom: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 24px;
+  padding: 16px 0 16px 16px; margin-bottom: 16px;
+  border-left: 4px solid #e0e2e5; align-items: center;
 }
-.pub:hover { transform: translateY(-1px); border-color: var(--accent-soft);
-  box-shadow: 0 4px 16px rgba(30,45,70,.09); }
-
 .pub .thumb {
-  width: 190px; height: 119px; border-radius: 9px; overflow: hidden;
-  background: var(--accent-weak); border: 1px solid var(--border);
+  width: 300px; min-height: 135px; max-height: 190px;
+  display: flex; align-items: center; justify-content: center; background: white;
+}
+.pub .thumb img { width: 100%; max-height: 190px; height: auto; object-fit: contain; background: white; }
+.pub .thumb .zoom {
+  width: 100%; padding: 0; border: 0; background: white; cursor: zoom-in;
   display: flex; align-items: center; justify-content: center;
 }
-.pub .thumb img { width: 100%; height: 100%; object-fit: contain; background: #fff; }
-.pub .thumb .ph { color: var(--accent); opacity: .5; font-size: .72rem; text-align: center; padding: .4rem; }
-
-/* 缩略图点击放大：整块缩略图是一个按钮 */
-.pub .thumb .zoom {
-  width: 100%; height: 100%; padding: 0; border: none; background: none;
-  display: block; cursor: zoom-in; position: relative;
+.pub .thumb .zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.pub .body { min-width: 0; }
+.pub .title { font-size: 1rem; font-weight: 600; font-style: italic; line-height: 1.45; margin: 0 0 6px; }
+.pub .title a { color: #20252d; }
+.pub .title a:hover { color: #004ff1; }
+.pub .authors { color: var(--text-soft); font-size: .88rem; line-height: 1.5; margin-bottom: 5px; }
+.pub .authors strong { color: var(--text); }
+.pub .venue { color: #004ff1; font-style: italic; font-weight: 650; font-size: .95rem; }
+.pub .note { font-size: .76rem; font-style: normal; color: var(--text-soft); margin-left: .65rem; }
+.pub .note.oral { font-size: .88rem; font-weight: 700; color: #b04829; }
+.pub .desc { font-size: .85rem; color: var(--text-soft); margin-top: .4rem; line-height: 1.55; }
+.pub .links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; }
+.pub .links a, .publication-intro a {
+  color: #242930; font-size: .88rem; padding: 0 1px; line-height: 1.5;
+  background: linear-gradient(transparent 60%, rgba(255, 210, 30, .35) 60%);
 }
-.pub .thumb .zoom::after {
-  content: ""; position: absolute; inset: 0;
-  background: var(--accent); opacity: 0; transition: opacity .16s ease;
-}
-.pub .thumb .zoom:hover::after { opacity: .08; }
-.pub .thumb .zoom:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pub .links a:hover, .publication-intro a:hover { color: #004ff1; background-color: #fff3b6; }
+.pub .links svg { display: none; }
 
 /* ---------- 论文主图放大层 ---------- */
 .lightbox {
@@ -312,42 +311,6 @@ body.lb-open { overflow: hidden; }
 @media (max-width: 640px) {
   .lightbox { padding: 3rem .8rem 1rem; }
   .lightbox .lb-fig img { max-height: 72vh; }
-}
-
-.pub .body { min-width: 0; }
-.pub .title { font-weight: 700; font-size: 1.02rem; line-height: 1.4; color: var(--text); }
-.pub .star { color: var(--gold); margin-right: .25rem; }
-.pub .authors { font-size: .9rem; color: var(--text-soft); margin: .3rem 0; }
-.pub .authors b, .pub .authors strong { color: var(--text); }
-.pub .venue { font-size: .88rem; color: var(--accent); font-weight: 600; font-style: italic; }
-.pub .note {
-  display: inline-block; font-size: .72rem; font-weight: 700; color: var(--gold);
-  border: 1px solid var(--gold); border-radius: 5px; padding: .02rem .4rem; margin-left: .5rem;
-  font-style: normal; vertical-align: middle;
-}
-
-.pub .ptags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .55rem; }
-.pub .ptags span {
-  font-size: .72rem; padding: .16rem .55rem; border-radius: 6px;
-  background: var(--surface-alt); color: var(--text-faint); border: 1px solid var(--border);
-}
-
-.pub .links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
-.pub .links a {
-  display: inline-flex; align-items: center; gap: .32rem;
-  font-size: .8rem; font-weight: 600; padding: .28rem .7rem;
-  border-radius: 7px; border: 1px solid var(--accent);
-  color: var(--accent); background: transparent; transition: all .15s ease;
-}
-.pub .links a:hover { background: var(--accent); color: #fff; }
-.pub .links a svg { width: 13px; height: 13px; fill: currentColor; }
-
-/* 次要链接（如 DOI）：比 Paper/Code 弱一档，用灰边灰字 */
-.pub .links a.secondary {
-  border-color: var(--border); color: var(--text-soft); font-weight: 500;
-}
-.pub .links a.secondary:hover {
-  background: var(--text-soft); border-color: var(--text-soft); color: #fff;
 }
 
 /* 展开/收起按钮 */
@@ -384,15 +347,72 @@ html.lang-zh .blk.i18n-zh { display: block; }
   .sidebar { position: static; height: auto; border-right: none;
     border-bottom: 1px solid var(--border); }
   .main { padding: 2rem 1.4rem 3rem; }
-  .avatar { width: 132px; height: 132px; }
+  .avatar { width: 120px; height: 160px; }
   .exp-item { grid-template-columns: 1fr; gap: .5rem; }
   .exp-logo { width: auto; }
   .exp-logo img { max-height: 34px; }
   .topnav { padding: .7rem 1.4rem; gap: 1rem; }
 }
 @media (max-width: 560px) {
-  .pub { grid-template-columns: 1fr; }
-  .pub .thumb { width: 100%; height: 190px; }
+  .pub { grid-template-columns: 1fr; gap: 16px; padding: 16px 0 16px 14px; }
+  .pub .thumb { width: 100%; min-height: 0; max-height: none; }
+  .pub .thumb img { max-height: 220px; }
 }
 
 
+
+/* CV updates */
+.profile-links { display: flex; flex-wrap: wrap; gap: 7px 14px; justify-content: center; margin-top: 15px; font-size: .8rem; }
+.achievements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 24px; padding: 18px 0; border-block: 1px solid var(--border); }
+.achievements > div { display: flex; flex-direction: column; }
+.achievements strong { font-size: 1.8rem; color: var(--accent); line-height: 1.3; }
+.achievements span { font-size: .79rem; color: var(--text-soft); line-height: 1.5; margin-top: 4px; }
+.news .date { min-width: 86px; }
+.news .what { min-width: 0; }
+.news-links { display: flex; gap: 18px; font-size: .84rem; margin-top: 10px; }
+.news-links a { text-decoration: underline; text-underline-offset: 3px; }
+.news-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 16px 0 10px; }
+.news-gallery img { width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain; background: #f5f6f8; border-radius: 3px; }
+.news-gallery figcaption { font-size: .71rem; line-height: 1.45; color: var(--text-faint); margin-top: 6px; }
+.project-description { font-size: .9rem; color: var(--text-soft); margin-top: 10px; }
+.project-note { font-size: .83rem; font-style: italic; margin-top: 8px; color: var(--text-faint); }
+.service-row { display: grid; grid-template-columns: 185px minmax(0, 1fr); gap: 20px; padding: 10px 0; }
+.service-row h3 { font-size: .9rem; font-weight: 650; }
+.service-row ul { list-style: none; color: var(--text-soft); font-size: .9rem; }
+.competition-summary { margin-top: 22px; font-size: .92rem; color: var(--text-soft); }
+.competition-details { margin-top: 12px; font-size: .88rem; }
+.competition-details summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.competition-details ul { list-style: none; margin-top: 12px; }
+.competition-details li { display: flex; justify-content: space-between; gap: 15px; border-bottom: 1px solid var(--border); padding: 10px 0; }
+.competition-award { display: block; color: var(--text-soft); }
+.competition-role { color: var(--text-faint); font-size: .8rem; flex: none; }
+.honors .hy { min-width: 54px; }
+@media (min-width: 861px) and (max-width: 1170px) {
+  .layout { grid-template-columns: 230px minmax(0, 1fr); }
+  .main { padding-inline: 28px; }
+  .sidebar { padding-inline: 20px; }
+  .pub { grid-template-columns: 240px minmax(0, 1fr); gap: 20px; padding-left: 12px; }
+  .pub .thumb { width: 240px; }
+}
+@media (max-width: 860px) {
+  .sidebar { height: auto; padding: 30px 24px 24px; }
+  .main { padding-top: 22px; }
+  .pub { grid-template-columns: 260px minmax(0, 1fr); gap: 22px; }
+  .pub .thumb { width: 260px; }
+}
+@media (max-width: 640px) {
+  .pub { grid-template-columns: 1fr; gap: 16px; padding: 18px 0 18px 14px; }
+  .pub .thumb { width: 100%; min-height: 0; }
+  .pub .thumb img { max-height: 230px; }
+  .news li { flex-direction: column; gap: 6px; }
+  .news-gallery { gap: 8px; }
+  .achievements { gap: 12px; }
+  .achievements span { font-size: .72rem; }
+  .service-row { grid-template-columns: 1fr; gap: 3px; }
+  .competition-details li { flex-direction: column; gap: 3px; }
+  .pub .note { display: inline-block; margin-left: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

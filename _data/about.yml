@@ -1,45 +1,40 @@
-# ============================================================
-#  About / 关于我
-#  三段式结构（参考 PRISM 与 Hankai Liu 的通行写法）：
-#    第一段：我现在在哪、在谁手下
-#    第二段：Prior to this —— 回溯学历与各阶段师承
-#    第三段：当前研究方向
-#  这样读者三句话就能理清你的位置与师承，不必自己拼时间线。
-# ============================================================
-
 bio:
-  en: >
-    I am a Research Fellow (postdoc) at the <b>National University of Singapore</b>,
-    working with <b>Prof. Jiaheng Zhang</b>. I am also a visiting scholar at
-    <b>CUHK-Shenzhen</b>.
-    <br><br>
-    Prior to this, I received my Ph.D. in Control Science and Engineering from the
-    <b>National University of Defense Technology</b> (2020–2025). During my Ph.D.,
-    I spent a year as a joint-training student at <b>Nanyang Technological University</b>,
-    where my research on multimodal perception was supervised by
-    <b>Prof. Haizhou Li</b>. I obtained my B.Eng. in Electronic and Information
-    Engineering from <b>Dalian Maritime University</b> (2016–2020).
-    <br><br>
-    My research centers on <b>AI safety and trustworthy multimodal learning</b>.
-    I work on continual learning that resists catastrophic forgetting, deepfake
-    detection that generalizes to unseen forgeries, robust learning under noisy
-    labels, and multimodal perception spanning lip reading and neural signal decoding.
-    My work has appeared at ICCV, NeurIPS, AAAI, ACM Multimedia, and Neural Networks.
-  zh: >
-    我是<b>新加坡国立大学</b>博士后研究员（Research Fellow），
-    合作导师为 <b>Jiaheng Zhang 教授</b>；同时担任<b>香港中文大学（深圳）</b>访问学者。
-    <br><br>
-    在此之前，我于 2020–2025 年在<b>国防科技大学</b>获得控制科学与工程博士学位。
-    博士期间曾在<b>南洋理工大学</b>联合培养一年，
-    多模态感知方向的研究由<b>李海洲教授</b>指导。
-    2016–2020 年在<b>大连海事大学</b>获得电子信息工程学士学位。
-    <br><br>
-    我的研究聚焦<b>人工智能安全与可信多模态学习</b>，
-    包括抵抗灾难性遗忘的持续学习、可泛化到未知伪造类型的深度伪造检测、
-    噪声标签下的鲁棒学习，以及涵盖唇语识别与神经信号解码的多模态感知。
-    研究成果发表于 ICCV、NeurIPS、AAAI、ACM Multimedia 与 Neural Networks 等。
-
-# 研究关键词（会显示成一排小标签）
+  en: I am a <b>Research Fellow</b> at the <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">School
+    of Computing, National University of Singapore</a>, working with <a href="https://zjhzjh123.github.io/" target="_blank"
+    rel="noopener">Jiaheng Zhang</a> and <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng
+    He</a> (IEEE Fellow). I also collaborate with <a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank"
+    rel="noopener">Haizhou Li</a> (IEEE Fellow; Singapore Academy of Engineering Fellow) and <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
+    target="_blank" rel="noopener">Nitin Chawla</a> (ST Fellow; Director of Edge AI, STMicroelectronics).<br><br>Previously,
+    I was a Research Assistant at <b>The Chinese University of Hong Kong, Shenzhen</b> (March 2023–June 2026), working
+    with Prof. Haizhou Li. I received my Ph.D. in Control Science and Engineering from the <b>National University
+    of Defense Technology</b> (2020–2025) and my B.Eng. in Electronic Information Engineering from <b>Dalian Maritime
+    University</b> (2016–2020).<br><br>My research focuses on <b>AI safety, continual learning, and multimodal perception</b>,
+    including generalizable deepfake detection, robust learning with noisy labels, lip reading, neural signal decoding,
+    and efficient wearable AI.
+  zh: 我是<b>新加坡国立大学计算机学院</b>博士后研究员（Research Fellow），与 <a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener">Jiaheng
+    Zhang</a> 和 <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng He</a>（IEEE
+    Fellow）合作。同时，与<a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank" rel="noopener">李海洲教授</a>（IEEE
+    Fellow、新加坡工程院院士）及 <a href="https://in.linkedin.com/in/nitin-chawla-7081659" target="_blank" rel="noopener">Nitin
+    Chawla</a>（ST Fellow、意法半导体边缘 AI 总监）开展合作。<br><br>此前，我于 2023 年 3 月至 2026 年 6 月在<b>香港中文大学（深圳）</b>担任研究助理，与李海洲教授合作。2020–2025
+    年在<b>国防科技大学</b>攻读控制科学与工程博士学位；2016–2020 年在<b>大连海事大学</b>获得电子信息工程学士学位。<br><br>我的研究聚焦<b>人工智能安全、持续学习与多模态感知</b>，涵盖可泛化的深度伪造检测、噪声标签下的鲁棒学习、唇语识别、神经信号解码及高效可穿戴人工智能。
 keywords:
-  en: ["AI Safety", "Continual Learning", "Deepfake Detection", "Multimodal Learning", "Lip Reading", "Neural Decoding"]
-  zh: ["AI 安全", "持续学习", "深度伪造检测", "多模态学习", "唇语识别", "神经解码"]
+  en:
+  - AI Safety
+  - Continual Learning
+  - Multimodal Perception
+  - Wearable AI
+  zh:
+  - AI 安全
+  - 持续学习
+  - 多模态感知
+  - 可穿戴 AI
+achievements:
+- number: '17'
+  en: publications · including 5 first-author oral papers
+  zh: 篇论文 · 含 5 篇第一作者 Oral 论文
+- number: '25'
+  en: published patent applications · 20 granted
+  zh: 项已公开专利申请 · 20 项已授权
+- number: '19'
+  en: competition honors and distinctions
+  zh: 项竞赛荣誉与奖励

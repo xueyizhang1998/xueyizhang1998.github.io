@@ -1,14 +1,28 @@
-# ============================================================
-#  Projects / 科研项目
-# ============================================================
-
-- period: ""
+- period: 2024.12 – 2026.06
   name:
-    en: "AI Security Defense and Evaluation Technologies"
-    zh: "人工智能安全防御与评估技术"
+    en: Full-Duplex Affective Dialogue Robot
+    zh: 全双工情感对话机器人
   program:
-    en: "National Key R&D Program of China"
-    zh: "国家重点研发计划"
+    en: The Chinese University of Hong Kong, Shenzhen
+    zh: 香港中文大学（深圳）
   role:
-    en: "Core member"
-    zh: "核心成员"
+    en: Working with Prof. Haizhou Li.
+    zh: 与李海洲教授合作。
+  description:
+    en: 'Inspired by Daniel Kahneman’s Thinking, Fast and Slow, the robot combines fast and slow responses for natural
+      full-duplex conversation: it listens while speaking and supports interruptions. Speech, facial expressions,
+      gaze, and posture guide empathetic responses, expressive faces, and head/gaze tracking.'
+    zh: 受丹尼尔·卡尼曼《思考，快与慢》启发，结合快慢响应，实现边说边听、支持自然打断的全双工对话。融合语音、面部表情、视线与姿态线索，协调共情语音、表情及头部／视线跟踪。
+  note:
+    en: 'Related manuscript: Full-Duplex Affective Dialogue Robot (under review).'
+    zh: 相关论文：Full-Duplex Affective Dialogue Robot（审稿中）。
+- period: ''
+  name:
+    en: AI Security Defense and Evaluation Technologies
+    zh: 人工智能安全防御与评估技术
+  program:
+    en: National Key R&D Program of China
+    zh: 国家重点研发计划
+  role:
+    en: Core member
+    zh: 核心成员

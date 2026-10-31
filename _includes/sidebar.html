@@ -1,6 +1,6 @@
 {%- assign p = site.data.profile -%}
 <aside class="sidebar">
-  <img class="avatar" src="{{ p.avatar | relative_url }}" alt="avatar"
+  <img class="avatar" src="{{ p.avatar | relative_url }}" alt="Portrait of Xueyi Zhang" width="600" height="798"
        onerror="this.src='{{ '/assets/img/avatar-placeholder.svg' | relative_url }}'">
 
   <div class="name"><span class="i18n-en">{{ p.name.en }}</span><span class="i18n-zh">{{ p.name.zh }}</span></div>
@@ -32,6 +32,10 @@
     {% if p.links.orcid != "" %}<a href="{{ p.links.orcid }}" target="_blank" rel="noopener" title="ORCID">{% include icons.html id="orcid" %}</a>{% endif %}
     {% if p.links.linkedin != "" %}<a href="{{ p.links.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">{% include icons.html id="linkedin" %}</a>{% endif %}
     {% if p.links.twitter != "" %}<a href="{{ p.links.twitter }}" target="_blank" rel="noopener" title="X / Twitter">{% include icons.html id="twitter" %}</a>{% endif %}
-    {% if p.links.cv != "" %}<a href="{{ p.links.cv | relative_url }}" target="_blank" rel="noopener" title="CV">{% include icons.html id="cv" %}</a>{% endif %}
+  </div>
+  <div class="profile-links">
+    {% if p.links.openreview %}<a href="{{ p.links.openreview }}" target="_blank" rel="noopener">OpenReview</a>{% endif %}
+    {% if p.links.scopus %}<a href="{{ p.links.scopus }}" target="_blank" rel="noopener">Scopus</a>{% endif %}
+    {% if p.links.cv != "" %}<a href="{{ p.links.cv | relative_url }}" target="_blank" rel="noopener"><span class="i18n-en">Download CV</span><span class="i18n-zh">下载简历</span></a>{% endif %}
   </div>
 </aside>

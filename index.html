@@ -15,6 +15,11 @@ layout: default
     {% for k in site.data.about.keywords.en %}<span class="tag i18n-en">{{ k }}</span>{% endfor %}
     {% for k in site.data.about.keywords.zh %}<span class="tag i18n-zh">{{ k }}</span>{% endfor %}
   </div>
+  <div class="achievements">
+    {% for a in site.data.about.achievements %}
+    <div><strong>{{ a.number }}</strong><span class="i18n-en">{{ a.en }}</span><span class="i18n-zh">{{ a.zh }}</span></div>
+    {% endfor %}
+  </div>
 </section>
 
 <!-- ===================== News ===================== -->
@@ -24,7 +29,10 @@ layout: default
     {% for n in site.data.news %}
     <li>
       <span class="date">{{ n.date }}</span>
-      <span class="what"><span class="i18n-en">{{ n.en }}</span><span class="i18n-zh">{{ n.zh }}</span></span>
+      <div class="what"><span class="i18n-en">{{ n.en }}</span><span class="i18n-zh">{{ n.zh }}</span>
+        {% if n.links %}<div class="news-links">{% for link in n.links %}<a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</div>{% endif %}
+        {% if n.images %}<div class="news-gallery">{% for image in n.images %}<figure><img src="{{ image.src | relative_url }}" alt="{{ image.en | escape }}" loading="lazy" width="600" height="400"><figcaption><span class="i18n-en">{{ image.en }}</span><span class="i18n-zh">{{ image.zh }}</span></figcaption></figure>{% endfor %}</div>{% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>
@@ -34,32 +42,9 @@ layout: default
 <section class="section" id="publications">
   <h2><span class="i18n-en">{{ ui.nav.publications.en }}</span><span class="i18n-zh">{{ ui.nav.publications.zh }}</span></h2>
 
-  <div class="hint"><span class="i18n-en">{{ ui.labels.first_author.en }}</span><span class="i18n-zh">{{ ui.labels.first_author.zh }}</span></div>
-
-  {%- assign selected = site.data.publications | where_exp: "p", "p.selected" -%}
-
-  {% if selected.size > 0 %}
-  <div class="sub-h"><span class="i18n-en">{{ ui.labels.selected_pubs.en }}</span><span class="i18n-zh">{{ ui.labels.selected_pubs.zh }}</span></div>
-  {% assign sel_sorted = selected | sort: "order" | reverse %}
-  {% for item in sel_sorted %}{% include pub-card.html pub=item %}{% endfor %}
-  {% endif %}
-
-  {% if site.group_publications %}
-    {%- comment -%} 按研究方向分组 {%- endcomment -%}
-    <div class="sub-h" style="margin-top:1.8rem"><span class="i18n-en">{{ ui.labels.by_topic.en }}</span><span class="i18n-zh">{{ ui.labels.by_topic.zh }}</span></div>
-    {% for g in site.data.pub_groups %}
-      {% assign items = site.data.publications | where: "group", g.id | sort: "order" | reverse %}
-      {% if items.size > 0 %}
-        <div class="group-h"><span class="i18n-en">{{ g.en }}</span><span class="i18n-zh">{{ g.zh }}</span></div>
-        {% for item in items %}{% include pub-card.html pub=item %}{% endfor %}
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    {%- comment -%} 按年份倒序 {%- endcomment -%}
-    {% assign allpubs = site.data.publications | sort: "order" | reverse %}
-    <div class="sub-h" style="margin-top:1.8rem"><span class="i18n-en">{{ ui.labels.all_pubs.en }}</span><span class="i18n-zh">{{ ui.labels.all_pubs.zh }}</span></div>
-    {% for item in allpubs %}{% include pub-card.html pub=item %}{% endfor %}
-  {% endif %}
+  <div class="hint publication-intro"><span class="i18n-en">{{ ui.labels.publication_intro.en }}</span><span class="i18n-zh">{{ ui.labels.publication_intro.zh }}</span></div>
+  {% assign allpubs = site.data.publications | sort: "order" | reverse %}
+  {% for item in allpubs %}{% include pub-card.html pub=item %}{% endfor %}
 </section>
 
 <!-- ============ Experience（工作/学历/访学合并，按时间倒序） ============ -->
@@ -81,6 +66,7 @@ layout: default
           <span class="exp-period">{{ x.period }}</span>
         </div>
         <div class="exp-org"><span class="i18n-en">{{ x.org.en }}{% if x.location.en != "" %} · {{ x.location.en }}{% endif %}</span><span class="i18n-zh">{{ x.org.zh }}{% if x.location.zh != "" %} · {{ x.location.zh }}{% endif %}</span></div>
+        {% if x.dept.en != "" %}<div class="exp-meta"><span class="i18n-en">{{ x.dept.en }}</span><span class="i18n-zh">{{ x.dept.zh }}</span></div>{% endif %}
         {% if x.advisor.en != "" %}<div class="exp-meta"><span class="i18n-en">{{ x.advisor.en }}</span><span class="i18n-zh">{{ x.advisor.zh }}</span></div>{% endif %}
       </div>
     </div>
@@ -98,10 +84,21 @@ layout: default
     <div class="pname"><span class="i18n-en">{{ pr.name.en }}</span><span class="i18n-zh">{{ pr.name.zh }}</span></div>
     <div class="pprog"><span class="i18n-en">{{ pr.program.en }}</span><span class="i18n-zh">{{ pr.program.zh }}</span>{% if pr.period != "" %} · {{ pr.period }}{% endif %}</div>
     <div class="prole"><span class="i18n-en">{{ pr.role.en }}</span><span class="i18n-zh">{{ pr.role.zh }}</span></div>
+    {% if pr.description %}<p class="project-description"><span class="i18n-en">{{ pr.description.en }}</span><span class="i18n-zh">{{ pr.description.zh }}</span></p>{% endif %}
+    {% if pr.note %}<p class="project-note"><span class="i18n-en">{{ pr.note.en }}</span><span class="i18n-zh">{{ pr.note.zh }}</span></p>{% endif %}
   </div>
   {% endfor %}
 </section>
 {% endif %}
+
+<section class="section" id="service">
+  <h2><span class="i18n-en">Academic Service</span><span class="i18n-zh">学术服务</span></h2>
+  <div class="service-list">
+    {% for s in site.data.service %}
+    <div class="service-row"><h3><span class="i18n-en">{{ s.role.en }}</span><span class="i18n-zh">{{ s.role.zh }}</span></h3><ul>{% for item in s.items %}<li><span class="i18n-en">{{ item.en }}</span><span class="i18n-zh">{{ item.zh }}</span></li>{% endfor %}</ul></div>
+    {% endfor %}
+  </div>
+</section>
 
 <!-- ===================== Honors ===================== -->
 {% if site.data.honors and site.data.honors.size > 0 %}
@@ -112,5 +109,10 @@ layout: default
     <li><span class="hy">{{ h.year }}</span><span class="ht"><span class="i18n-en">{{ h.en }}</span><span class="i18n-zh">{{ h.zh }}</span></span></li>
     {% endfor %}
   </ul>
+  <div class="competition-summary"><span class="i18n-en">{{ ui.labels.competition_summary.en }}</span><span class="i18n-zh">{{ ui.labels.competition_summary.zh }}</span></div>
+  <details class="competition-details">
+    <summary><span class="i18n-en">{{ ui.labels.competition_details.en }}</span><span class="i18n-zh">{{ ui.labels.competition_details.zh }}</span></summary>
+    <ul>{% for c in site.data.competitions %}<li><div><strong><span class="i18n-en">{{ c.name.en }}</span><span class="i18n-zh">{{ c.name.zh }}</span></strong><span class="competition-award"><span class="i18n-en">{{ c.award.en }}</span><span class="i18n-zh">{{ c.award.zh }}</span></span></div><span class="competition-role"><span class="i18n-en">{{ c.role.en }}</span><span class="i18n-zh">{{ c.role.zh }}</span></span></li>{% endfor %}</ul>
+  </details>
 </section>
 {% endif %}

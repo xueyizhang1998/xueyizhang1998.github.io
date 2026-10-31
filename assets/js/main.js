@@ -3,6 +3,12 @@
    ========================================================= */
 (function () {
   var root = document.documentElement;
+  var nav = document.querySelector('.topnav');
+  if (nav && typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(function () {
+      root.style.setProperty('--nav-clearance', (nav.offsetHeight + 16) + 'px');
+    }).observe(nav);
+  }
 
   /* ---------- 语言切换 ---------- */
   function currentLang() {
