@@ -82,7 +82,7 @@ layout: default
   {% for pr in site.data.projects %}
   <div class="proj-card">
     <div class="pname"><span class="i18n-en">{{ pr.name.en }}</span><span class="i18n-zh">{{ pr.name.zh }}</span></div>
-    <div class="pprog"><span class="i18n-en">{{ pr.program.en }}</span><span class="i18n-zh">{{ pr.program.zh }}</span>{% if pr.period != "" %} · {{ pr.period }}{% endif %}</div>
+    <div class="pprog"><span class="i18n-en">{{ pr.program.en }}</span><span class="i18n-zh">{{ pr.program.zh }}</span>{% if pr.period != "" %} · <span class="project-period">{{ pr.period }}</span>{% endif %}</div>
     <div class="prole"><span class="i18n-en">{{ pr.role.en }}</span><span class="i18n-zh">{{ pr.role.zh }}</span></div>
     {% if pr.description %}<p class="project-description"><span class="i18n-en">{{ pr.description.en }}</span><span class="i18n-zh">{{ pr.description.zh }}</span></p>{% endif %}
     {% if pr.note %}<p class="project-note"><span class="i18n-en">{{ pr.note.en }}</span><span class="i18n-zh">{{ pr.note.zh }}</span></p>{% endif %}
