@@ -2,7 +2,7 @@
 
 Bilingual academic homepage for [xueyizhang1998.github.io](https://xueyizhang1998.github.io), built with Jekyll and published through GitHub Pages.
 
-The October 2026 update uses the supplied CV for the portrait, biography, current appointments, HELIX launch and translation-glasses demo, robot project, academic service, and honors. The publication section follows [Zhiyuan Yan’s homepage](https://yzy-stack.github.io/): a method figure on the left and an italic title, authors, venue, and compact resource buttons on the right. Each of the eight papers appears once. Four of these selected papers are marked Oral, as stated in the CV.
+The October 2026 update uses the supplied CV for the portrait, biography, current appointments, HELIX launch and translation-glasses demo, robot project, academic service, and honors; subsequent author corrections update the current research focus, honors, and timeline. The publication section follows [Zhiyuan Yan’s homepage](https://yzy-stack.github.io/): a method figure on the left and an italic title, authors, venue, and compact resource buttons on the right. Each of the eight papers appears once. Five of these selected papers are marked Oral, including EventLip as confirmed by the author.
 
 ## Edit content
 

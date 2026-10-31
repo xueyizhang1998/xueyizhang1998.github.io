@@ -10,9 +10,6 @@
     <span class="i18n-en">{% if p.department.en != "" %}{{ p.department.en }}, {% endif %}{{ p.affiliation.en }}</span>
     <span class="i18n-zh">{{ p.affiliation.zh }}{% if p.department.zh != "" %} {{ p.department.zh }}{% endif %}</span>
   </div>
-  {% if p.motto.en != "" %}
-  <div class="motto"><span class="i18n-en">{{ p.motto.en }}</span><span class="i18n-zh">{{ p.motto.zh }}</span></div>
-  {% endif %}
   </div>
   </div>
 
@@ -26,16 +23,10 @@
   {% endif %}
 
   <div class="social">
-    {% if p.links.scholar != "" %}<a href="{{ p.links.scholar }}" target="_blank" rel="noopener" title="Google Scholar">{% include icons.html id="scholar" %}<span>Scholar</span></a>{% endif %}
-    {% if p.links.github != "" %}<a href="{{ p.links.github }}" target="_blank" rel="noopener" title="GitHub">{% include icons.html id="github" %}<span>GitHub</span></a>{% endif %}
-    {% if p.links.dblp != "" %}<a href="{{ p.links.dblp }}" target="_blank" rel="noopener" title="DBLP">DBLP</a>{% endif %}
-    {% if p.links.orcid != "" %}<a href="{{ p.links.orcid }}" target="_blank" rel="noopener" title="ORCID">{% include icons.html id="orcid" %}</a>{% endif %}
-    {% if p.links.linkedin != "" %}<a href="{{ p.links.linkedin }}" target="_blank" rel="noopener" title="LinkedIn">{% include icons.html id="linkedin" %}</a>{% endif %}
-    {% if p.links.twitter != "" %}<a href="{{ p.links.twitter }}" target="_blank" rel="noopener" title="X / Twitter">{% include icons.html id="twitter" %}</a>{% endif %}
+    {% if p.links.openreview %}<a href="{{ p.links.openreview }}" target="_blank" rel="noopener">OpenReview</a>{% endif %}
+    {% if p.links.dblp %}<a href="{{ p.links.dblp }}" target="_blank" rel="noopener">DBLP</a>{% endif %}
   </div>
   <div class="profile-links">
-    {% if p.links.openreview %}<a href="{{ p.links.openreview }}" target="_blank" rel="noopener">OpenReview</a>{% endif %}
-    {% if p.links.scopus %}<a href="{{ p.links.scopus }}" target="_blank" rel="noopener">Scopus</a>{% endif %}
     {% if p.links.cv != "" %}<a class="cv-link" href="{{ p.links.cv | relative_url }}?v={{ site.github.build_revision | default: site.asset_version }}" target="_blank" rel="noopener">{% include icons.html id="cv" %}<span class="i18n-en">Download CV</span><span class="i18n-zh">下载简历</span></a>{% endif %}
   </div>
 </aside>

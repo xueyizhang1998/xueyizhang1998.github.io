@@ -14,17 +14,8 @@ location:
   en: Singapore
   zh: 新加坡
 avatar: /assets/img/avatar.jpg
-motto:
-  en: AI Safety · Continual Learning · Multimodal Perception
-  zh: AI 安全 · 持续学习 · 多模态感知
 email: xueyi.zhang@nus.edu.sg
 links:
-  scholar: https://scholar.google.com/citations?user=-hFq7VAAAAAJ
-  github: https://github.com/xueyizhang1998
-  dblp: https://dblp.org/pid/90/10666-1.html
-  orcid: ''
-  linkedin: ''
-  twitter: ''
-  cv: /assets/cv/xueyi-zhang-cv.pdf
   openreview: https://openreview.net/profile?id=~Xueyi_Zhang2
-  scopus: https://www.scopus.com/authid/detail.uri?authorId=57426987700
+  dblp: https://dblp.org/pid/90/10666-1.html
+  cv: /assets/cv/xueyi-zhang-cv.pdf

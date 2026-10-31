@@ -1,31 +1,35 @@
 bio:
   en: I am a <b>Research Fellow</b> in the <a href="https://www.comp.nus.edu.sg/" target="_blank" rel="noopener">School
     of Computing at the National University of Singapore (NUS)</a>, working with <a href="https://zjhzjh123.github.io/"
-    target="_blank" rel="noopener">Jiaheng Zhang</a> and <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank"
-    rel="noopener">Bingsheng He</a>. I also collaborate with <a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/"
-    target="_blank" rel="noopener">Haizhou Li</a> and <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
-    target="_blank" rel="noopener">Nitin Chawla</a> (STMicroelectronics).<br><br>My research focuses on <b>AI safety,
-    continual learning, and multimodal perception</b>. I develop methods for learning from evolving data and noisy
-    supervision, with applications in deepfake detection, lip reading, neural signal decoding, and wearable AI.<br><br>Before
-    joining NUS, I was a Research Assistant at <b>The Chinese University of Hong Kong, Shenzhen</b>. I received
-    my Ph.D. in Control Science and Engineering from the <b>National University of Defense Technology</b> in 2025
-    and my B.Eng. in Electronic Information Engineering from <b>Dalian Maritime University</b> in 2020.
-  zh: 我现任<b>新加坡国立大学计算机学院</b>博士后研究员（Research Fellow），与 <a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener">Jiaheng
-    Zhang</a> 和 <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng He</a> 合作，并与<a
-    href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank" rel="noopener">李海洲教授</a>及意法半导体的 <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
-    target="_blank" rel="noopener">Nitin Chawla</a> 开展合作。<br><br>我的研究聚焦<b>人工智能安全、持续学习与多模态感知</b>，关注数据与任务变化、噪声监督条件下的可靠学习，应用涵盖深度伪造检测、唇语识别、神经信号解码和可穿戴
-    AI。<br><br>此前，我在<b>香港中文大学（深圳）</b>担任研究助理。2025 年于<b>国防科技大学</b>获得控制科学与工程博士学位，2020 年于<b>大连海事大学</b>获得电子信息工程学士学位。
+    target="_blank" rel="noopener">Jiaheng Zhang</a> (Presidential Young Professor and NRF Fellow) and <a href="https://www.comp.nus.edu.sg/~hebs/"
+    target="_blank" rel="noopener">Bingsheng He</a> (IEEE Fellow). I also collaborate with <a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/"
+    target="_blank" rel="noopener">Haizhou Li</a> (IEEE Fellow) and <a href="https://in.linkedin.com/in/nitin-chawla-7081659"
+    target="_blank" rel="noopener">Nitin Chawla</a> (ST Fellow, STMicroelectronics).<br><br>My current research
+    focuses on <b>efficient inference and on-chip deployment of large multimodal models</b>, with an emphasis on
+    <b>algorithm–hardware co-design</b>.<br><br>Before joining NUS, I was a Research Assistant at <b>The Chinese
+    University of Hong Kong, Shenzhen</b>. I received my Ph.D. in Control Science and Engineering from the <b>National
+    University of Defense Technology</b> in December 2025 and my B.Eng. in Electronic Information Engineering from
+    <b>Dalian Maritime University</b> in 2020.<br><br>During my undergraduate studies, I received the <b>President’s
+    Scholarship</b> and the <b>Top Ten Students Award</b>, Dalian Maritime University’s highest undergraduate honors;
+    the latter recognizes 10 undergraduates university-wide each year. During my Ph.D., I was named a <b>Deya Scholar</b>,
+    NUDT’s highest student honor, awarded to 15 students university-wide each year across undergraduate, master’s,
+    and doctoral programs.
+  zh: 我现任<b>新加坡国立大学计算机学院</b>博士后研究员（Research Fellow），与<a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener">张嘉恒</a>（Presidential
+    Young Professor、NRF Fellow）和 <a href="https://www.comp.nus.edu.sg/~hebs/" target="_blank" rel="noopener">Bingsheng
+    He</a>（IEEE Fellow）合作，并与<a href="https://cde.nus.edu.sg/ece/staff/li-haizhou/" target="_blank" rel="noopener">李海洲教授</a>（IEEE
+    Fellow）及意法半导体的 <a href="https://in.linkedin.com/in/nitin-chawla-7081659" target="_blank" rel="noopener">Nitin
+    Chawla</a>（ST Fellow）开展合作。<br><br>我目前关注<b>多模态大模型的高效推理与片上部署</b>，重点研究<b>多模态大模型的算法与硬件协同设计（co-design）</b>。<br><br>此前，我在<b>香港中文大学（深圳）</b>担任研究助理。2025
+    年 12 月于<b>国防科技大学</b>获得控制科学与工程博士学位，2020 年于<b>大连海事大学</b>获得电子信息工程学士学位。<br><br>本科期间，获得大连海事大学最高本科生荣誉——<b>校长奖学金</b>和<b>十佳大学生</b>，其中十佳大学生每年从全校本科生中评选
+    10 人。博士期间，获评国防科技大学最高学生荣誉<b>德雅学子（Deya Scholar）</b>，每年从全校本科生、硕士生和博士生中共评选 15 人。
 keywords:
   en:
-  - AI Safety
-  - Continual Learning
-  - Multimodal Perception
   - Wearable AI
+  - Large Model Inference Acceleration
+  - Multimodal Perception
   zh:
-  - AI 安全
-  - 持续学习
-  - 多模态感知
   - 可穿戴 AI
+  - 大模型推理加速
+  - 多模态感知
 achievements:
 - number: '17'
   en: Publications

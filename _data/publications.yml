@@ -112,7 +112,7 @@
     zh: 面向事件相机唇语识别的频率感知时空超图建模。
   links:
     paper: https://doi.org/10.1145/3746027.3755404
-  note: ''
+  note: Oral
 - title: 'Listening to the Brain: Multi-Band sEEG Auditory Reconstruction via Dynamic Spatio-Temporal Hypergraphs'
   authors: '**Xueyi Zhang**, Ruicong Wang, Jialu Sun, Siqi Cai, Haizhou Li'
   venue: NeurIPS 2025

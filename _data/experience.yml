@@ -14,8 +14,8 @@
     en: Singapore
     zh: 新加坡
   advisor:
-    en: With Jiaheng Zhang and Bingsheng He
-    zh: 与 Jiaheng Zhang 和 Bingsheng He 合作
+    en: With Jiaheng Zhang (Presidential Young Professor and NRF Fellow) and Bingsheng He (IEEE Fellow)
+    zh: 与张嘉恒（Presidential Young Professor、NRF Fellow）及 Bingsheng He（IEEE Fellow）合作
   logo: nus.png
   abbr: NUS
 - period: 2023.03 – 2026.06
@@ -34,31 +34,11 @@
     en: Shenzhen, China
     zh: 中国深圳
   advisor:
-    en: With Haizhou Li
-    zh: 与李海洲教授合作
+    en: With Haizhou Li (IEEE Fellow)
+    zh: 与李海洲教授（IEEE Fellow）合作
   logo: cuhk-sz.png
   abbr: CUHK
-- period: 2024.08 – 2025.08
-  sort: 202408
-  kind: visiting
-  role:
-    en: Joint-Training Ph.D. Student
-    zh: 博士联合培养
-  org:
-    en: Nanyang Technological University
-    zh: 南洋理工大学
-  dept:
-    en: ''
-    zh: ''
-  location:
-    en: Singapore
-    zh: 新加坡
-  advisor:
-    en: 'Supervisor: Haizhou Li'
-    zh: 导师：李海洲教授
-  logo: ntu.png
-  abbr: NTU
-- period: 2020.09 – 2025.06
+- period: 2020.09 – 2025.12
   sort: 202009
   kind: degree
   role:

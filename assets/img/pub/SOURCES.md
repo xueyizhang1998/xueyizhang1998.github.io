@@ -15,4 +15,4 @@ These images are crops of the original papers, rendered at four pixels per PDF p
 
 CSLR is a dataset and benchmark paper; its preprocessing pipeline illustrates the method for preparing the visual-speech data. The page previously displayed a dataset-statistics plot for this work.
 
-Portrait and HELIX event photographs were extracted from the CV supplied by Xueyi Zhang. Publication titles, author order, and figures were checked against the original PDFs. Oral designations and the other CV updates follow the supplied CV. Figure rights remain with the respective authors and publishers.
+Portrait and HELIX event photographs were extracted from the CV supplied by Xueyi Zhang. Publication titles, author order, and figures were checked against the original PDFs. Oral designations follow the supplied CV and subsequent author confirmation that EventLip is also Oral. Figure rights remain with the respective authors and publishers.
