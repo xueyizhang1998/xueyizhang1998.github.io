@@ -6,7 +6,7 @@
 title: "Xueyi Zhang"
 tagline: "Academic Homepage"
 description: "Xueyi Zhang — Research Fellow at the National University of Singapore. Efficient inference and on-chip deployment of large multimodal models; algorithm–hardware co-design."
-lang: "en"                # 默认语言 en / zh（首次访问时的语言）
+lang: "en"                # 每次加载默认显示英文，中文由按钮切换
 
 # 论文展示方式：true = 按研究方向分组；false = 按年份倒序
 group_publications: false
@@ -16,7 +16,7 @@ url: "https://xueyizhang1998.github.io"
 baseurl: ""
 
 # 本地预览的资源版本；GitHub Pages 发布时自动使用当前提交版本。
-asset_version: "20261031-5"
+asset_version: "20261031-6"
 
 # ---- 构建设置（一般不用改）----
 markdown: kramdown

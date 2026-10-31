@@ -45,7 +45,7 @@ Styles, scripts, the portrait, and the CV use the GitHub build revision in their
 
 ## Layout and behavior
 
-- English/Chinese toggle with a saved language preference.
+- English on every page load, with an optional Chinese translation toggle.
 - A portrait extracted from the supplied CV, preserving its crop.
 - Responsive publication rows with complete, uncropped method diagrams.
 - Figure viewer with keyboard focus handling and Escape to close.

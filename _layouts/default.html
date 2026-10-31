@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="lang-{{ site.lang | default: 'en' }}">
+<html lang="en" class="lang-en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,16 +7,6 @@
   <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: site.asset_version }}">
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}">
-  <!-- 首屏前就设定语言，避免闪烁 -->
-  <script>
-    (function(){
-      try{
-        var l = localStorage.getItem('lang');
-        var r = document.documentElement;
-        if(l){ r.className = 'lang-' + l; r.setAttribute('lang', l); }
-      }catch(e){}
-    })();
-  </script>
 </head>
 <body>
   {% include toolbar.html %}

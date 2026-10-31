@@ -49,7 +49,11 @@
     root.classList.remove('lang-en', 'lang-zh');
     root.classList.add('lang-' + l);
     root.setAttribute('lang', l);
-    try { localStorage.setItem('lang', l); } catch (e) {}
+    if (langBtn) {
+      var label = l === 'zh' ? '切换至英文' : 'Read in Chinese';
+      langBtn.setAttribute('aria-label', label);
+      langBtn.setAttribute('title', label);
+    }
     syncToggleLabel();
     window.requestAnimationFrame(syncActiveSection);
   }
