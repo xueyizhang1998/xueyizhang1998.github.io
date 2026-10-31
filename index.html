@@ -7,8 +7,8 @@ layout: default
 <section class="section" id="about">
   <h2><span class="i18n-en">{{ ui.nav.about.en }}</span><span class="i18n-zh">{{ ui.nav.about.zh }}</span></h2>
   <div class="bio">
-    <div class="blk i18n-en">{{ site.data.about.bio.en }}</div>
-    <div class="blk i18n-zh">{{ site.data.about.bio.zh }}</div>
+    <div class="blk i18n-en"><p>{{ site.data.about.bio.en | replace: '<br><br>', '</p><p>' }}</p></div>
+    <div class="blk i18n-zh"><p>{{ site.data.about.bio.zh | replace: '<br><br>', '</p><p>' }}</p></div>
   </div>
   <div class="sub-h"><span class="i18n-en">{{ ui.labels.interests.en }}</span><span class="i18n-zh">{{ ui.labels.interests.zh }}</span></div>
   <div class="keywords">
@@ -27,8 +27,8 @@ layout: default
   <h2><span class="i18n-en">{{ ui.nav.news.en }}</span><span class="i18n-zh">{{ ui.nav.news.zh }}</span></h2>
   <ul class="news">
     {% for n in site.data.news %}
-    <li>
-      <span class="date">{{ n.date }}</span>
+    <li{% if n.images %} class="news-featured"{% endif %}>
+      <time class="date" datetime="{{ n.date | replace: '.', '-' }}">{{ n.date }}</time>
       <div class="what"><span class="i18n-en">{{ n.en }}</span><span class="i18n-zh">{{ n.zh }}</span>
         {% if n.links %}<div class="news-links">{% for link in n.links %}<a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</div>{% endif %}
         {% if n.images %}<div class="news-gallery">{% for image in n.images %}<figure><img src="{{ image.src | relative_url }}" alt="{{ image.en | escape }}" loading="lazy" width="600" height="400"><figcaption><span class="i18n-en">{{ image.en }}</span><span class="i18n-zh">{{ image.zh }}</span></figcaption></figure>{% endfor %}</div>{% endif %}
@@ -80,7 +80,7 @@ layout: default
 <section class="section" id="projects">
   <h2><span class="i18n-en">{{ ui.nav.projects.en }}</span><span class="i18n-zh">{{ ui.nav.projects.zh }}</span></h2>
   {% for pr in site.data.projects %}
-  <div class="proj-card" style="margin-bottom:.7rem">
+  <div class="proj-card">
     <div class="pname"><span class="i18n-en">{{ pr.name.en }}</span><span class="i18n-zh">{{ pr.name.zh }}</span></div>
     <div class="pprog"><span class="i18n-en">{{ pr.program.en }}</span><span class="i18n-zh">{{ pr.program.zh }}</span>{% if pr.period != "" %} · {{ pr.period }}{% endif %}</div>
     <div class="prole"><span class="i18n-en">{{ pr.role.en }}</span><span class="i18n-zh">{{ pr.role.zh }}</span></div>

@@ -2,7 +2,7 @@
 
 Bilingual academic homepage for [xueyizhang1998.github.io](https://xueyizhang1998.github.io), built with Jekyll and published through GitHub Pages.
 
-The October 2026 update uses the supplied CV for the portrait, biography, current appointments, HELIX launch and translation-glasses demo, robot project, academic service, and honors. The publication section follows [Zhiyuan Yan’s homepage](https://yzy-stack.github.io/): a method figure on the left and an italic title, authors, venue, and highlighted text links on the right. Each of the eight papers appears once. Four of these selected papers are marked Oral, as stated in the CV.
+The October 2026 update uses the supplied CV for the portrait, biography, current appointments, HELIX launch and translation-glasses demo, robot project, academic service, and honors. The publication section follows [Zhiyuan Yan’s homepage](https://yzy-stack.github.io/): a method figure on the left and an italic title, authors, venue, and compact resource buttons on the right. Each of the eight papers appears once. Four of these selected papers are marked Oral, as stated in the CV.
 
 ## Edit content
 
@@ -41,6 +41,8 @@ bundle exec jekyll serve
 
 Commit the reviewed changes and push to the existing `main` branch. GitHub Pages builds the site from the repository root. The live address stays [xueyizhang1998.github.io](https://xueyizhang1998.github.io).
 
+Styles, scripts, the portrait, and the CV use the GitHub build revision in their URLs so returning visitors receive the current files. Local previews fall back to `asset_version` in `_config.yml`.
+
 ## Layout and behavior
 
 - English/Chinese toggle with a saved language preference.
@@ -48,6 +50,9 @@ Commit the reviewed changes and push to the existing `main` branch. GitHub Pages
 - Responsive publication rows with complete, uncropped method diagrams.
 - Figure viewer with keyboard focus handling and Escape to close.
 - Native expandable competition-award details.
-- White background, restrained blue type, and pale yellow link highlighting in the publication list.
+- White background, restrained blue type, thin section rules, and consistent resource buttons.
+- Active-section navigation, keyboard focus indicators, and a compact profile layout on phones.
+
+The typography and information hierarchy were refined after reviewing the academic homepages of [Jon Barron](https://jonbarron.info/), [Piotr Dollár](https://pdollar.github.io/), [Kaiming He](https://people.csail.mit.edu/kaiming/), [Phillip Isola](https://web.mit.edu/phillipi/), [Jiaheng Zhang](https://zjhzjh123.github.io/), [Ziwei Liu](https://liuziwei7.github.io/), and [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/).
 
 The implementation is independent; the reference site is used for visual direction. Paper figures belong to their respective authors and publishers.

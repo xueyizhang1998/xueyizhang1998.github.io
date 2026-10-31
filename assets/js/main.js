@@ -10,6 +10,37 @@
     }).observe(nav);
   }
 
+  var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]')) : [];
+  var navSections = navLinks.map(function (link) {
+    return document.getElementById(link.getAttribute('href').slice(1));
+  });
+  function syncActiveSection() {
+    if (!navLinks.length) return;
+    var current = 0;
+    var threshold = nav.getBoundingClientRect().bottom + 64;
+    navSections.forEach(function (section, index) {
+      if (section && section.getBoundingClientRect().top <= threshold) current = index;
+    });
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+      current = navLinks.length - 1;
+    }
+    navLinks.forEach(function (link, index) {
+      if (index === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  var navUpdatePending = false;
+  window.addEventListener('scroll', function () {
+    if (navUpdatePending) return;
+    navUpdatePending = true;
+    window.requestAnimationFrame(function () {
+      syncActiveSection();
+      navUpdatePending = false;
+    });
+  }, { passive: true });
+  window.addEventListener('resize', syncActiveSection);
+  syncActiveSection();
+
   /* ---------- 语言切换 ---------- */
   function currentLang() {
     return root.classList.contains('lang-zh') ? 'zh' : 'en';
@@ -20,6 +51,7 @@
     root.setAttribute('lang', l);
     try { localStorage.setItem('lang', l); } catch (e) {}
     syncToggleLabel();
+    window.requestAnimationFrame(syncActiveSection);
   }
   var langBtn = document.getElementById('langBtn');
   if (langBtn) {
